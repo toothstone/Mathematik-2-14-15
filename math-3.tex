@@ -120,20 +120,20 @@ Aus der Linearen Algebra wissen wir, dass aus (29.1) sofort
 d\leq n
 \end{equation}
 folgt. Dies sei in Kapitel VIII immer erfüllt! (29.2) ist außerdem äquivalent dazu, dass $\rang \varphi'(x)=d$.\\
-\includegraphics[scale=0.5]{MA2_0001}
+\includegraphics[scale=0.5]{pictures/MA2_0001}
 \begin{beispiel}[reguläre Kurven $\varphi:I\subset\mathbb{R}\rightarrow\mathbb{R}^n$]
 Dabei ist $I$ offen und der Tagentialvektor nirgendwo identisch mit dem Nullvektor, also $\varphi'(x)\neq 0$
 \begin{enumerate}
 \item $\varphi:(0,2\pi)\rightarrow\mathbb{R}^2$ mit $\varphi(t)=\begin{pmatrix}
 \cos kt \\ \sin kt
 \end{pmatrix}$ und $k\in\mathbb{N}_{\geq 2}$\\
-\begin{center}\includegraphics[scale=0.3]{MA2_0002}\\ \end{center}
+\begin{center}\includegraphics[scale=0.3]{pictures/MA2_0002}\\ \end{center}
 Der Einheitskreis wird hier k-mal durchlaufen. Da $\varphi'(x)\neq 0$, ist $\varphi$ regulär.
 \item $\varphi(-\pi,\pi)\rightarrow\mathbb{R}^2$ mit $\varphi(t)=(1+2\cos t)\begin{pmatrix}
 \cos t \\ \sin t
 \end{pmatrix}$\\
 \begin{center}
-\includegraphics[scale=0.3]{MA2_0003}\\
+\includegraphics[scale=0.3]{pictures/MA2_0003}\\
 \end{center}
 $\varphi(\pm\frac{2\pi}{3})=\begin{pmatrix}
 0 \\ 0
@@ -147,7 +147,7 @@ $\begin{pmatrix}
 t^3 \\ t^2
 \end{pmatrix}$ \ ist wegen $\varphi'(0)=0$ \ \textbf{nicht} regulär\\
 \begin{center}
-\includegraphics[scale=0.3]{MA2_0004}
+\includegraphics[scale=0.3]{pictures/MA2_0004}
 \end{center}
 \end{enumerate}
 \end{beispiel}
@@ -156,7 +156,7 @@ t^3 \\ t^2
 Sei $f\in C^q(V,\mathbb{R}^{n-d})$,\\
 $V\subset\mathbb{R}^d$. Betrachtet wird $\varphi:V\rightarrow\mathbb{R}^n$ mit $\varphi(x)=(x,f(x))$\\
 \begin{center}
-\includegraphics[scale=0.5]{MA2_0005}\\
+\includegraphics[scale=0.5]{pictures/MA2_0005}\\
 \end{center}
 $\varphi$ ist regulär, da offenbar $\varphi\in C^q(V,\mathbb{R}^n)$ und $\varphi'=\begin{pmatrix}
 id^d \\ f'(x)
@@ -165,14 +165,14 @@ id^d \\ f'(x)
 \end{beispiel}
 Es folgt eine Wiederholung zur \textbf{Relativtopologie} (vgl. Kapitel 14). Wir wissen, dass $U\subset M$ genau dann offen bezüglich $M$ ist, wenn es ein $\tilde{U}\subset\mathbb{R}^n$ gibt, dass offen ist, und das $U=\tilde{U}\cap M$ erfüllt. Später wird $M$ eine Mannigfaltigkeit sein und wir werden untersuchen, was in ihr offen ist.\\
 \begin{center}
-\includegraphics[scale=0.5]{MA2_0006}\\
+\includegraphics[scale=0.5]{pictures/MA2_0006}\\
 \end{center}
 Auf dieser Grundlage lässt sich auch der Begriff der \textbf{Umgebung} definieren:\\
 $U\subset M$ heißt nämlich genau dann Umgebung von $u\in M$ bezüglich $M$, wenn es ein bezüglich $M$ offenes $U_0\subset M$ gibt, in dem $u$ liegt und das Teilmenge von $U$ ist.\linebreak\linebreak
 \newpage
 \textbf{\textsf{Beispiel für}} \ $M\subset\mathbb{R}^n$.\\
 \begin{center}
-\includegraphics[scale=0.5]{MA2_0007}\\
+\includegraphics[scale=0.5]{pictures/MA2_0007}\\
 \end{center}
 \hspace{70pt} offen bzgl. M \hspace{70pt} nicht offen bzgl. M\\
 \begin{definition}[Mannigfaltigkeiten]
@@ -186,7 +186,7 @@ Wir nennen $M\subset\mathbb{R}^n$ eine \textbf{d-dimensionale $C^q$-Mannigfaltig
 In der Literatur wird $M$ auch manchmal als $C^q$-\emph{Unter}mannigfaltigkeit bezeichnet. Wir werden jedoch später zeigen, dass die verschiedenen Definitionen von Mannigfaltigkeiten gleichwertig sind.\\
 Da ab jetzt immer hauptsächlich $C^1$-Mannigfaltigkeiten auftauchen werden, werden wir diese in Zukunft einfach "Mannigfaltigkeiten" nennen.\\
 \begin{center}
-\includegraphics[scale=0.5]{MA2_0008}\\
+\includegraphics[scale=0.5]{pictures/MA2_0008}\\
 \end{center}
 Die Umkehrabbildung $\varphi^{-1}$ beziehungsweise ($\varphi^{-1}, U$) nennt man die \textbf{Karte} von $M$ um $u\in M$, wobei $U$ das zugehörige \textbf{Kartengebiet}, $\varphi$ selbst die Parametrisierung und $V$ der Parameterbereich ist.\\
 Karten können eine Mannigfaltigkeit jedoch nur lokal beschreiben. Aus diesem Grund führt man den Begriff des Atlas, der eine globale Beschreibung ermöglicht, ein:\\
@@ -207,7 +207,7 @@ Sei $f:D\subset\mathbb{R}^n\rightarrow\mathbb{R}^{n-d}$ ($D$ offen) q-fach steti
 \rang f'(u)=n-d \ \ \ \ \ \ \ \forall u\in D
 \end{equation}
 Wir nennen $M=\{u\in D \ | \ f(n)=0\}$ die Niveaumenge von $f$\\
-\begin{center}\includegraphics[scale=0.5]{MA2_0009}\\
+\begin{center}\includegraphics[scale=0.5]{pictures/MA2_0009}\\
 \end{center}
 Fixieren wir $\tilde{u}=(\tilde{x},\tilde{y})=(x_1,...,x_d,y_1,...,y_{n-d})\in M$, so sehen wir mit (29.3) und eventuellen Koordinatenvertauschungen, dass $f(\tilde{x},\tilde{y})$ regulär ist. Der \emph{Satz über implizite Funktionen} sichert uns nun, dass es eine Umgebung $V\subset\mathbb{R}^d$ von $\tilde{x}$, eine Umgebung $W\subset\mathbb{R}^{n-d}$ von $\tilde{y}$ und ein $\psi:V\rightarrow W\in C^q(V,W)$ gibt, das $(x,\psi(x))\in M$ erfüllt und homöomorph ist.\\
 Es folgt, dass $\varphi:V\subset\mathbb{R}^d\rightarrow\mathbb{R}^n$ mit $\varphi(x)=(x,\psi(x))$ eine homöomorphe, reguläre Einbettung  und $\varphi(V)$ Umgebung von $\tilde{u}\in M$ bezüglich von $M$ ist. Daraus können wir nun schließen, dass $M$ eine d-dimensionale $C^q$-Mannigfaltigkeit ist.\\
