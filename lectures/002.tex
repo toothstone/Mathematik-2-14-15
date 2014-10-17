@@ -1,0 +1,54 @@
+\begin{sa}
+
+(lokale Darstellung einer Mannigfaltigkeit als Graph)
+
+Sei $M \subset  \mathbb{R}^{n}$ eine d-dimensionale $C^{q}$-Mannigfaltigkeit.
+
+$\Longleftrightarrow \forall u \in M \subset \mathbb{R}^n $ existiert eine Umgebung
+$U$ von $u$  bezüglich $M$, $W \subset \mathbb{R}^n $ offen, 
+$f \in C^q (W, \mathbb{R}^{n-d})$ und eine Permutation $\pi$ von Koordinaten in
+$\mathbb{R}^n $ mit $ \psi (W) = U $ für $ \psi (v) \coloneqq \psi (v, f(v)) 
+\forall v \in W $ (das heißt $U$ ist Graph von f).
+
+\underline{somit:} $M$ ist $C^q$-Mannigfaltigkeit genau dann, wenn $M$ lokaler Graph
+einer $C^q$-Funktion $f$ ist (vergleiche Beispiel 29.2 und 4).
+
+\end{sa}
+
+\begin{proof}
+
+$"\Leftarrow"$ folgt aus Beispielen 29.2 und 29.4. \\
+$"\Rightarrow"$ fixiere $\tilde{u} \in M $, sei $\varphi : \tilde{V} \in \mathbb{R}^d
+\rightarrow \tilde{U} \subset \mathbb{R}^n $ und der zugehörige $C^q$-Parameter 
+$\tilde{u} = \varphi (\tilde{x})$ \\
+$\varphi' (x)$ ist regulär $\xRightarrow{\text{ evtl. $\pi$ der Zeilen }} \varphi_I ' 
+(\tilde{x}) \subseteq \mathbb{R}^{d \times d} $ ist regulär für $\varphi (x) =
+    \begin{pmatrix}
+    \varphi_I (x) \left[ \in \mathbb{R}^d \right]\\
+    \varphi_{II} (x) \left[ \in \mathbb{R}^{n-d} \right]
+    \end{pmatrix}
+$ \\
+Zerlege $u = \pi (v,w) $ mit $v \in \mathbb{R}^d $, 
+d.h. $\tilde{u} = \pi (\tilde{v},\tilde{w})$
+
+\textbf{Skizzen fehlen!}
+
+$\xRightarrow{\text{Theorem über inverse Fkt.}} \exists V \subset \tilde{V} $ offen,
+$\tilde{x} \in V, W \subset \mathbb{R}^d $ offen, $\tilde{v} \in W $
+mit $\varphi_I ^{-1} : W \rightarrow V $ Homöomorphismus und $C^q$-Abbildung,
+$\varphi_I ^{-1} (\tilde{v}) = \tilde{x} $ \\
+mit $f(v) \coloneqq \varphi_{II} \left(\varphi_I ^{-1} (v)\right) \forall v \in W $ ist 
+$f \in C^q \left(W, \mathbb{R}^{n-d}\right) $ \\
+und $\psi (v) \coloneqq \varphi \left(\varphi_I ^{-1} (v) \right) =
+\left( \varphi_I \left(\varphi_I ^{-1} (v) \right( ,
+\varphi_{II} \left(\varphi_I ^ {-1} (v) \right) \right) = \pi \left(v, f(v)\right) $ \\
+$\Rightarrow \psi (\tilde{v}) = \pi (\tilde{v}, \tilde{w}) = \tilde{u},
+\psi (w) = \varphi (v) \in M \\
+\varphi : \tilde{V} \rightarrow \tilde{U} $ ist Homöomorphismus \\
+$\Rightarrow \varphi (v) $ ist offen in $M$ \\
+$ \Rightarrow U \coloneqq \psi (W) $ ist offen bezüglich $M$
+$\Rightarrow U $ ist Umgebung von $\tilde{u} $ bezüglich $M$ \\
+$\xRightarrow{\tilde{u} \text{ beliebig}} $ Behauptung. 
+
+\end{proof}
+
