@@ -4,6 +4,7 @@ README
 
 This repository containe tex files and pictures for generating a complete 
 pdf-version of the lecture notes for math III for physicists at TU DD.
+All content is (currently) in German language.
 
 ==Coding style==
 
