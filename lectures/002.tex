@@ -1,4 +1,4 @@
-\begin{sa}[lokale Darstellung einer Mannigfaltigkeit als Graph]
+\begin{satz}[lokale Darstellung einer Mannigfaltigkeit als Graph]
 \mbox{} \\
 Sei $M \subset \mathbb{R}^{n}$ eine d-dimensionale $C^{q}$-Mannigfaltigkeit. \\
 $\Longleftrightarrow \forall u \in M \subset \mathbb{R}^n $ existiert eine Umgebung
@@ -6,7 +6,7 @@ $U$ von $u$  bezüglich $M$, $W \subset \mathbb{R}^n $ offen,
 $f \in C^q (W, \mathbb{R}^{n-d})$ und eine Permutation $\pi$ von Koordinaten in
 $\mathbb{R}^n $ mit $ \psi (W) = U $ für $ \psi (v) \coloneqq \psi (v, f(v)) 
 \forall v \in W $ (das heißt $U$ ist Graph von f).
-\end{sa}
+\end{satz}
 
 \textbf{somit:} $M$ ist $C^q$-Mannigfaltigkeit genau dann, wenn $M$ lokaler Graph
 einer $C^q$-Funktion $f$ ist (vergleiche Beispiel 2 und 4).
@@ -25,9 +25,10 @@ $\varphi' (x)$ ist regulär $\xRightarrow{\text{ evtl. $\pi$ der Zeilen }} \varp
     \end{pmatrix}
 $ \\
 Zerlege $u = \pi (v,w) $ mit $v \in \mathbb{R}^d $, 
-d.h. $\tilde{u} = \pi (\tilde{v},\tilde{w})$
-
-\textbf{Skizzen fehlen!}\\
+d.h. $\tilde{u} = \pi (\tilde{v},\tilde{w})$\\
+\begin{center}
+\includegraphics[scale=0.5]{pictures/MA2_0010}\\
+\end{center}
 $\xRightarrow{\text{Theorem über inverse Fkt.}} \exists V \subset \tilde{V} $ offen,
 $\tilde{x} \in V, W \subset \mathbb{R}^d $ offen, $\tilde{v} \in W $
 mit $\varphi_I ^{-1} : W \rightarrow V $ Homöomorphismus und $C^q$-Abbildung,
@@ -47,7 +48,7 @@ $\xRightarrow{\tilde{u} \text{ beliebig}} $ Behauptung.
 
 \end{proof}
 
-\begin{sa}[Charakterisierung von Mf mit umgebendem Raum]
+\begin{satz}[Charakterisierung von Mf mit umgebendem Raum]
 \mbox{} \\
 $M \subset \mathbb{R}^n $ sei d-dimensionale $C^q$-Mannigfaltigkeit. \\
 $\Longleftrightarrow \forall u \in M $ existiert eine Umgebung $\tilde{U}$ von $u$ 
@@ -59,9 +60,10 @@ ein $C^q$-Diffeomorphismus ist und
     \tilde{\psi} \left( \tilde{U} \cap M \right) =
     \tilde{V} \cap \left( \mathbb{R}^d \times {0} \right) 
     \end{equation*}
-
-\textbf{Skizzen fehlen!}
-\end{sa}
+\begin{center}
+\includegraphics[scale=0.5]{pictures/MA2_0011}\\
+\end{center}
+\end{satz}
 
 \textbf{Bemerkung:} Diese Charakterisierung von Mannigfaltigkeiten benutzt den umgebenden Raum und wird häufig als Definition der Mannigfaltigkeit benutzt.    
     
@@ -106,7 +108,7 @@ $\tilde{\varphi} (x, 0) = \varphi (x) \forall x \in V $
 Folgt aus Beweisen von Satz 29.1 und 29.2
 \end{proof}
 
-\begin{theo}[lokale Darstellung von Mf als Niveaumenge]
+\begin{theorem}[lokale Darstellung von Mf als Niveaumenge]
 \mbox{} \\
 $M \subset \mathbb{R}^n $ sei d-dimensionale $C^q$-Mannigfaltigkeit. \\
 $\Longleftrightarrow \forall u \in M $ existiert eine Umgebing $\tilde{U}$ von $u$
@@ -114,7 +116,7 @@ bezüglich $\mathbb{R}^n$ und \\
 $f \in C^q \left( \tilde{U}, \mathbb{R}^{n-d} \right)$ 
 mit $\textit{rang } f' (u) = n-d $ und \\
 $\tilde{U} \cap M = \left\lbrace \tilde{u} \in \tilde{U} | f (\tilde{u}) = 0 \right\rbrace $
-\end{theo}
+\end{theorem}
 
 \textbf{somit:} $M$ ist eine $C^q$-Mannigfaltigkeit genau dann, 
 wenn $M$ die lokale Niveaumenge einer $C^q$-Funktion $f$ ist. \\
@@ -141,17 +143,18 @@ nach Konstruktion $ \left\lbrace u \in \tilde{U} | f(u) = 0 \right\rbrace = U \c
 \Rightarrow $ Behauptung.
 \end{proof}
 
-\begin{lem}[Kartenwechsel] 
+\begin{lemma}[Kartenwechsel] 
 \mbox{} \\
 Sei $M \in \mathbb{R}^n $ d-dimensionale Mannigfaltigkeit \\
 und $\varphi_1^{-1}, \varphi_2^{-1} $ Karten mit zugehörigem Kartengebiet 
 $U_1 \cap U_2 \neq \emptyset $ \\
 $\Longrightarrow 
 \varphi_2^{-1} \circ \varphi_1 : \varphi_1^{-1} \left( U_1 \cap U_2 \right)
-\rightarrow \varphi_2^{-1} \left( U_1 \cap U_2 \right) $ ist $C^q$-Diffeomorphismus.
-
-\textbf{Skizze fehlt!}
-\end{lem}
+\rightarrow \varphi_2^{-1} \left( U_1 \cap U_2 \right) $ ist $C^q$-Diffeomorphismus.\\
+\begin{center}
+\includegraphics[scale=0.5]{pictures/MA2_0012}\\
+\end{center}
+\end{lemma}
 
 \begin{proof}
 Ersetze $\varphi_1, \varphi_2 $ mit $\tilde{\varphi}_1, \tilde{\varphi}_2 $
@@ -166,10 +169,13 @@ Ein Vektor $v \in \mathbb{R}^n $ heißt \textbf{Tangentialvektor} in $u \in M $ 
 falls eine stetig differenzierbare Kurve 
 $\gamma: (-\delta, \delta) \rightarrow M (\delta > 0) $ exisitiert mit \\
 $\gamma (0) = u $ und $\gamma' (0) = v $. \\
-Die Menge aller Tangentialvektoren $T_uM$ heißt Tangentialraum.
+Die Menge aller Tangentialvektoren $T_uM$ heißt Tangentialraum.\\
+\begin{center}
+\includegraphics[scale=0.5]{pictures/MA2_0013}\\
+\end{center}
 \end{definition}
 
-\begin{sa}
+\begin{satz}
 Sei $M \in \mathbb{R}^n $ eine d-dimensionale Mannigfaltigkeit, \\
 $u \in M $, $ \varphi : V \rightarrow U $ der zugehörige Parameter um $u$ \\
 $\Longrightarrow T_uM $ ist d-dimensionaler $( \mathbb{R}-) $ Vektorraum und \\
@@ -178,7 +184,7 @@ $\Longrightarrow T_uM $ ist d-dimensionaler $( \mathbb{R}-) $ Vektorraum und \\
     \left( \mathbb{R}^d \right) \text{ für } x = \varphi^{-1} (u) 
     \end{equation}
 wobei $T_uM$ unabhängig vom speziellen Parameter $\varphi$ ist.
-\end{sa}
+\end{satz}
 
 \begin{proof}
 Sei $\gamma: (-\delta, \delta) \rightarrow M eine C^1$-Kurve mit $\gamma(0) = u $ \\

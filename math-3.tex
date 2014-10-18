@@ -61,12 +61,13 @@
     {\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}  % Theorem head spec (can be left empty, meaning ‘normal’)
 
 \theoremstyle{theoremstyle}
-\newtheorem{theo}{Theorem}[section]
-\newtheorem{sa}[theo]{Satz}
-\newtheorem{lem}[theo]{Lemma}
+\newtheorem{theo}{Theorem}[section]	% please use "theorem"
+\newtheorem{sa}[theo]{Satz}			% please use "satz"
+\newtheorem{lem}[theo]{Lemma}		% please use "lemma"
 \newtheorem{folgerung}[theo]{Folgerung}
 \newtheorem*{definition}{Definition}
 \newtheorem{beispiel}{Beispiel}
+\newtheorem*{beispiel*}{Beispiel}
 
 \newenvironment{theorem}
 	{\par\nobreak\vfil\penalty0\vfilneg
