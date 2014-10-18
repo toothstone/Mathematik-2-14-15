@@ -10,15 +10,15 @@ $f \in C^q (W, \mathbb{R}^{n-d})$ und eine Permutation $\pi$ von Koordinaten in
 $\mathbb{R}^n $ mit $ \psi (W) = U $ für $ \psi (v) \coloneqq \psi (v, f(v)) 
 \forall v \in W $ (das heißt $U$ ist Graph von f).
 
-\underline{somit:} $M$ ist $C^q$-Mannigfaltigkeit genau dann, wenn $M$ lokaler Graph
+\textbf{somit:} $M$ ist $C^q$-Mannigfaltigkeit genau dann, wenn $M$ lokaler Graph
 einer $C^q$-Funktion $f$ ist (vergleiche Beispiel 29.2 und 4).
 
 \end{sa}
 
 \begin{proof}
 
-$"\Leftarrow"$ folgt aus Beispielen 29.2 und 29.4. \\
-$"\Rightarrow"$ fixiere $\tilde{u} \in M $, sei $\varphi : \tilde{V} \in \mathbb{R}^d
+$"\Leftarrow"$: folgt aus Beispielen 29.2 und 29.4. \\
+$"\Rightarrow"$: fixiere $\tilde{u} \in M $, sei $\varphi : \tilde{V} \in \mathbb{R}^d
 \rightarrow \tilde{U} \subset \mathbb{R}^n $ und der zugehörige $C^q$-Parameter 
 $\tilde{u} = \varphi (\tilde{x})$ \\
 $\varphi' (x)$ ist regulär $\xRightarrow{\text{ evtl. $\pi$ der Zeilen }} \varphi_I ' 
@@ -55,6 +55,111 @@ $\xRightarrow{\tilde{u} \text{ beliebig}} $ Behauptung.
 \begin{sa}
 (Charakterisierung von Mannigfaltigkeiten mit umgebenedem Raum) \\
 $M \subset \mathbb{R}^n $ sei d-dimensionale $C^q$-Mannigfaltigkeit. \\
-$\Leftrightarrow \forall u \in M $ existiert eine Umgebung $\tilde{U}$ von $u$ 
+$\Longleftrightarrow \forall u \in M $ existiert eine Umgebung $\tilde{U}$ von $u$ 
+bezüglich $\mathbb{R}^n$, \\
+$\tilde{V} \subset \mathbb{R}^n $, 
+$\tilde{\psi}: \tilde{U} \rightarrow \tilde{V} $ wobei $\tilde{\psi} $ 
+ein $C^q$-Diffeomorphismus ist und 
+    \begin{equation*}
+    \tilde{\psi} \left( \tilde{U} \cap M \right) =
+    \tilde{V} \cap \left( \mathbb{R}^d \times {0} \right) 
+    \end{equation*}
+
+\textbf{Skizzen fehlen!}
 
 \end{sa}
+
+\textbf{Bemerkung:} Diese Charakterisierung von Mannigfaltigkeiten benutzt den umgebenden Raum und wird häufig als Definition der Mannigfaltigkeit benutzt.    
+    
+\begin{proof}
+$"\Leftarrow"$: $\psi $ eingeschränkt auf $\tilde{U} \cap M $ liefert Karten 
+$\Rightarrow$ Behauptung. \\
+$"\Rightarrow"$: fixiere $\tilde{u} \in M $, wähle $\tilde{U} \subset M $,
+$W \subset \mathbb{R}^d $, $f \in C^q \left( W, \mathbb{R}^{n-d} \right)$ \\
+gemäß Satz 1 oBdA $\pi = $ \textit{id} \\
+zerlege $u = (v,w) \in \mathbb{R}^d \times \mathbb{R}^{n-d}$, 
+$\tilde{u} = \left( \tilde{v}, f \left( \tilde{v} \right) \right) $ \\
+sei $\hat{U} \coloneqq W \times \mathbb{R}^{n-d} \eqqcolon \hat{V} $,
+liefert "Zylinder" aus $U$ und $W$ in Beweis zu Satz 29.6 \\
+sei $\tilde{\varphi}: \hat{V} \rightarrow \hat{U} $ mit
+$\tilde{\varphi} (v,w) \coloneqq (v, f(v) + w) \Rightarrow \tilde{\varphi} \in C^q $ \\
+$\tilde{\varphi}' \left( \tilde{v}, 0 \right) =
+    \begin{pmatrix}
+    \textit{id}_d & 0 \\
+    f'(v)         & \textit{id}_{n-d}
+    \end{pmatrix}
+$ ist regulär \\
+$\xRightarrow{\text{Satz ü. inverse Fkt.}} \exists $ 
+Umgebung $ \tilde{U} \subset \hat{U}$ von $\tilde{U}$,
+Umgebung $ \tilde{V} \subset \hat{V} $ von $ \left( \tilde{v}, 0 \right) $, sodass \\
+$\tilde{\psi} \coloneqq \tilde{\varphi}^{-1} \in C^q \left( \tilde{U}, \tilde{V} \right) $
+exisitiert. \\
+wegen $\tilde{\varphi} \left( \tilde{V} \cap \left( \mathbb{R}^d \times {0} \right) \right)
+= \tilde{U} \cap M $ folgt die Behauptung.
+\end{proof}
+
+\begin{folgerung}
+Sei $M \subset \mathbb{R}^n$ d-dimensionale $C^q$-Mannigfaltigkeit \\
+und $\varphi: V \subset \mathbb{R}^d \rightarrow U \subset M $ Parameter um $u \in M $ \\
+$\Longrightarrow \exists \tilde{U}, \tilde{V} \subset \mathbb{R}^n $ offen und 
+$\tilde{\varphi} : \tilde{V} \rightarrow \tilde{U} $ 
+mit $ U \subset \tilde{U}, V \times {0} \subset \tilde{V} $, \\
+$\tilde{\varphi} $ ist $C^q$-Diffeomorphismus und
+$\tilde{\varphi} (x, 0) = \varphi (x) \forall x \in V $
+\end{folgerung}
+
+\begin{proof}
+Folgt aus Beweisen von Satz 29.6 und 29.7
+\end{proof}
+
+\begin{theo}
+(lokale Darstellung von Mannigfaltigkeiten als Niveaumenge)\\
+$M \subset \mathbb{R}^n $ sei d-dimensionale $C^q$-Mannigfaltigkeit. \\
+$\Longleftrightarrow \forall u \in M $ existiert eine Umgebing $\tilde{U}$ von $u$
+bezüglich $\mathbb{R}^n$ und \\
+$f \in C^q \left( \tilde{U}, \mathbb{R}^{n-d} \right)$ 
+mit $\textit{rang } f' (u) = n-d $ und \\
+$\tilde{U} \cap M = \left\lbrace \tilde{u} \in \tilde{U} | f (\tilde{u}) = 0 \right\rbrace $
+\end{theo}
+
+\textbf{somit:} $M$ ist eine $C^q$-Mannigfaltigkeit genau dann, 
+wenn $M$ die lokale Niveaumenge einer $C^q$-Funktion $f$ ist. \\
+\textbf{Bemerkung:} $c \in \mathbb{R}^{n-d} $ heißt \textit{regulärer Wert} von
+$f \in C^q \left( \tilde{U}, \mathbb{R}^{n-d} \right), \tilde{U} \subset \mathbb{R}^n $
+offen, falls $\textit{rang } f' (u) = n-d \forall u \in \tilde{U} $ mit $f(u) = c $ \\
+Folglich ist $M \coloneqq \left\lbrace u \in \tilde{U} | f(u) = c \right\rbrace $ 
+eine d-dimensionale $C^q$-Mannigfaltigkeit, falls $c$ ein regulärer Wert von $f$ ist.
+
+\begin{proof}
+$"\Leftarrow":$ gemäß Bsp. 5 erhält man lokale Parametriesierung \\
+$\Rightarrow$ Behauptung. \\
+$"\Rightarrow":$ fixiere $\tilde{u} \in M$, 
+wähle $\tilde{U}, \tilde{V} \subset \mathbb{R}^n, 
+\tilde{\psi}: \tilde{U} \rightarrow \tilde{V} $ gemäß Satz 29.7 \\
+sei $f \coloneqq \left( \tilde{\psi}_{d+1}, \ldots , \tilde{\psi}_n \right)$,
+offenbar $f \in C^q \left(  \tilde{U}, \mathbb{R}^{n-d} \right) $ \\
+mit $\tilde{\psi}$ aus dem Beweis zu Satz 29.7:
+$\tilde{\psi}' (\tilde{u}) = \tilde{\varphi}' (\tilde{v}, 0)^{-1} $ ist regulär \\
+$\Rightarrow f'(\tilde{u}) $ hat vollen Rang, d.h. $\textit{rang } f'(\tilde{u}) = n-d $ \\
+nach Konstruktion $ \left\lbrace u \in \tilde{U} | f(u) = 0 \right\rbrace = U \cap M
+\Rightarrow $ Behauptung.
+\end{proof}
+
+\begin{lem}
+(Kartenwechsel) \\
+Sei $M \in \mathbb{R}^n $ d-dimensionale Mannigfaltigkeit \\
+und $\varphi_1^{-1}, \varphi_2^{-1} $ Karten mit zugehörigem Kartengebiet 
+$U_1 \cap U_2 \neq \emptyset $ \\
+$\Longrightarrow 
+\varphi_2^{-1} \bullet \varphi_1 : \varphi_1^{-1} \left( U_1 \cap U_2 \right)
+\rightarrow \varphi_2^{-1} \left( U_1 \cap U_2 \right) $ ist $C^q$-Diffeomorphismus.
+
+\textbf{Skizze fehlt!}
+\end{lem}
+
+\begin{proof}
+Ersetze $\varphi_1, \varphi_2 $ mit $\tilde{\varphi}_1, \tilde{\varphi}_2 $
+gemäß Folgerung 29.8 \\
+$\Rightarrow$ Einschränkung von $\tilde{\varphi}_2^{-1} \bullet \tilde{\varphi}_1 $
+liefert Behauptung. 
+\end{proof}
