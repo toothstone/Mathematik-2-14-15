@@ -1,23 +1,19 @@
-\begin{sa}
-
-(lokale Darstellung einer Mannigfaltigkeit als Graph)
-
-Sei $M \subset  \mathbb{R}^{n}$ eine d-dimensionale $C^{q}$-Mannigfaltigkeit.
-
+\begin{sa}[lokale Darstellung einer Mannigfaltigkeit als Graph]
+\mbox{} \\
+Sei $M \subset \mathbb{R}^{n}$ eine d-dimensionale $C^{q}$-Mannigfaltigkeit. \\
 $\Longleftrightarrow \forall u \in M \subset \mathbb{R}^n $ existiert eine Umgebung
 $U$ von $u$  bezüglich $M$, $W \subset \mathbb{R}^n $ offen, 
 $f \in C^q (W, \mathbb{R}^{n-d})$ und eine Permutation $\pi$ von Koordinaten in
 $\mathbb{R}^n $ mit $ \psi (W) = U $ für $ \psi (v) \coloneqq \psi (v, f(v)) 
 \forall v \in W $ (das heißt $U$ ist Graph von f).
+\end{sa}
 
 \textbf{somit:} $M$ ist $C^q$-Mannigfaltigkeit genau dann, wenn $M$ lokaler Graph
-einer $C^q$-Funktion $f$ ist (vergleiche Beispiel 29.2 und 4).
-
-\end{sa}
+einer $C^q$-Funktion $f$ ist (vergleiche Beispiel 2 und 4).
 
 \begin{proof}
 
-$"\Leftarrow"$: folgt aus Beispielen 29.2 und 29.4. \\
+$"\Leftarrow"$: folgt aus Beispielen 2 und 4. \\
 $"\Rightarrow"$: fixiere $\tilde{u} \in M $, sei $\varphi : \tilde{V} \in \mathbb{R}^d
 \rightarrow \tilde{U} \subset \mathbb{R}^n $ und der zugehörige $C^q$-Parameter 
 $\tilde{u} = \varphi (\tilde{x})$ \\
@@ -31,8 +27,7 @@ $ \\
 Zerlege $u = \pi (v,w) $ mit $v \in \mathbb{R}^d $, 
 d.h. $\tilde{u} = \pi (\tilde{v},\tilde{w})$
 
-\textbf{Skizzen fehlen!}
-
+\textbf{Skizzen fehlen!}\\
 $\xRightarrow{\text{Theorem über inverse Fkt.}} \exists V \subset \tilde{V} $ offen,
 $\tilde{x} \in V, W \subset \mathbb{R}^d $ offen, $\tilde{v} \in W $
 mit $\varphi_I ^{-1} : W \rightarrow V $ Homöomorphismus und $C^q$-Abbildung,
@@ -52,8 +47,8 @@ $\xRightarrow{\tilde{u} \text{ beliebig}} $ Behauptung.
 
 \end{proof}
 
-\begin{sa}
-(Charakterisierung von Mannigfaltigkeiten mit umgebenedem Raum) \\
+\begin{sa}[Charakterisierung von Mf mit umgebendem Raum]
+\mbox{} \\
 $M \subset \mathbb{R}^n $ sei d-dimensionale $C^q$-Mannigfaltigkeit. \\
 $\Longleftrightarrow \forall u \in M $ existiert eine Umgebung $\tilde{U}$ von $u$ 
 bezüglich $\mathbb{R}^n$, \\
@@ -66,7 +61,6 @@ ein $C^q$-Diffeomorphismus ist und
     \end{equation*}
 
 \textbf{Skizzen fehlen!}
-
 \end{sa}
 
 \textbf{Bemerkung:} Diese Charakterisierung von Mannigfaltigkeiten benutzt den umgebenden Raum und wird häufig als Definition der Mannigfaltigkeit benutzt.    
@@ -76,11 +70,11 @@ $"\Leftarrow"$: $\psi $ eingeschränkt auf $\tilde{U} \cap M $ liefert Karten
 $\Rightarrow$ Behauptung. \\
 $"\Rightarrow"$: fixiere $\tilde{u} \in M $, wähle $\tilde{U} \subset M $,
 $W \subset \mathbb{R}^d $, $f \in C^q \left( W, \mathbb{R}^{n-d} \right)$ \\
-gemäß Satz 1 oBdA $\pi = $ \textit{id} \\
+gemäß Satz 29.1 oBdA $\pi = $ \textit{id} \\
 zerlege $u = (v,w) \in \mathbb{R}^d \times \mathbb{R}^{n-d}$, 
 $\tilde{u} = \left( \tilde{v}, f \left( \tilde{v} \right) \right) $ \\
 sei $\hat{U} \coloneqq W \times \mathbb{R}^{n-d} \eqqcolon \hat{V} $,
-liefert "Zylinder" aus $U$ und $W$ in Beweis zu Satz 29.6 \\
+liefert "Zylinder" aus $U$ und $W$ in Beweis zu Satz 29.1 \\
 sei $\tilde{\varphi}: \hat{V} \rightarrow \hat{U} $ mit
 $\tilde{\varphi} (v,w) \coloneqq (v, f(v) + w) \Rightarrow \tilde{\varphi} \in C^q $ \\
 $\tilde{\varphi}' \left( \tilde{v}, 0 \right) =
@@ -109,11 +103,11 @@ $\tilde{\varphi} (x, 0) = \varphi (x) \forall x \in V $
 \end{folgerung}
 
 \begin{proof}
-Folgt aus Beweisen von Satz 29.6 und 29.7
+Folgt aus Beweisen von Satz 29.1 und 29.2
 \end{proof}
 
-\begin{theo}
-(lokale Darstellung von Mannigfaltigkeiten als Niveaumenge)\\
+\begin{theo}[lokale Darstellung von Mf als Niveaumenge]
+\mbox{} \\
 $M \subset \mathbb{R}^n $ sei d-dimensionale $C^q$-Mannigfaltigkeit. \\
 $\Longleftrightarrow \forall u \in M $ existiert eine Umgebing $\tilde{U}$ von $u$
 bezüglich $\mathbb{R}^n$ und \\
@@ -124,8 +118,10 @@ $\tilde{U} \cap M = \left\lbrace \tilde{u} \in \tilde{U} | f (\tilde{u}) = 0 \ri
 
 \textbf{somit:} $M$ ist eine $C^q$-Mannigfaltigkeit genau dann, 
 wenn $M$ die lokale Niveaumenge einer $C^q$-Funktion $f$ ist. \\
+
 \textbf{Bemerkung:} $c \in \mathbb{R}^{n-d} $ heißt \textit{regulärer Wert} von
-$f \in C^q \left( \tilde{U}, \mathbb{R}^{n-d} \right), \tilde{U} \subset \mathbb{R}^n $
+$f \in C^q \left( \tilde{U}, \mathbb{R}^{n-d} \right) $, \\
+$\tilde{U} \subset \mathbb{R}^n $
 offen, falls $\textit{rang } f' (u) = n-d \forall u \in \tilde{U} $ mit $f(u) = c $ \\
 Folglich ist $M \coloneqq \left\lbrace u \in \tilde{U} | f(u) = c \right\rbrace $ 
 eine d-dimensionale $C^q$-Mannigfaltigkeit, falls $c$ ein regulärer Wert von $f$ ist.
@@ -135,23 +131,23 @@ $"\Leftarrow":$ gemäß Bsp. 5 erhält man lokale Parametriesierung \\
 $\Rightarrow$ Behauptung. \\
 $"\Rightarrow":$ fixiere $\tilde{u} \in M$, 
 wähle $\tilde{U}, \tilde{V} \subset \mathbb{R}^n, 
-\tilde{\psi}: \tilde{U} \rightarrow \tilde{V} $ gemäß Satz 29.7 \\
+\tilde{\psi}: \tilde{U} \rightarrow \tilde{V} $ gemäß Satz 29.2 \\
 sei $f \coloneqq \left( \tilde{\psi}_{d+1}, \ldots , \tilde{\psi}_n \right)$,
 offenbar $f \in C^q \left(  \tilde{U}, \mathbb{R}^{n-d} \right) $ \\
-mit $\tilde{\psi}$ aus dem Beweis zu Satz 29.7:
+mit $\tilde{\psi}$ aus dem Beweis zu Satz 29.2:
 $\tilde{\psi}' (\tilde{u}) = \tilde{\varphi}' (\tilde{v}, 0)^{-1} $ ist regulär \\
 $\Rightarrow f'(\tilde{u}) $ hat vollen Rang, d.h. $\textit{rang } f'(\tilde{u}) = n-d $ \\
 nach Konstruktion $ \left\lbrace u \in \tilde{U} | f(u) = 0 \right\rbrace = U \cap M
 \Rightarrow $ Behauptung.
 \end{proof}
 
-\begin{lem}
-(Kartenwechsel) \\
+\begin{lem}[Kartenwechsel] 
+\mbox{} \\
 Sei $M \in \mathbb{R}^n $ d-dimensionale Mannigfaltigkeit \\
 und $\varphi_1^{-1}, \varphi_2^{-1} $ Karten mit zugehörigem Kartengebiet 
 $U_1 \cap U_2 \neq \emptyset $ \\
 $\Longrightarrow 
-\varphi_2^{-1} \bullet \varphi_1 : \varphi_1^{-1} \left( U_1 \cap U_2 \right)
+\varphi_2^{-1} \circ \varphi_1 : \varphi_1^{-1} \left( U_1 \cap U_2 \right)
 \rightarrow \varphi_2^{-1} \left( U_1 \cap U_2 \right) $ ist $C^q$-Diffeomorphismus.
 
 \textbf{Skizze fehlt!}
@@ -159,7 +155,66 @@ $\Longrightarrow
 
 \begin{proof}
 Ersetze $\varphi_1, \varphi_2 $ mit $\tilde{\varphi}_1, \tilde{\varphi}_2 $
-gemäß Folgerung 29.8 \\
-$\Rightarrow$ Einschränkung von $\tilde{\varphi}_2^{-1} \bullet \tilde{\varphi}_1 $
+gemäß Folgerung 29.3 \\
+$\Rightarrow$ Einschränkung von $\tilde{\varphi}_2^{-1} \circ \tilde{\varphi}_1 $
 liefert Behauptung. 
 \end{proof}
+
+\begin{definition}
+Sei $M \subset \mathbb{R}^n $ d-dimensionale Mannigfaltigkeit. \\
+Ein Vektor $v \in \mathbb{R}^n $ heißt \textbf{Tangentialvektor} in $u \in M $ an $M$, \\
+falls eine stetig differenzierbare Kurve 
+$\gamma: (-\delta, \delta) \rightarrow M (\delta > 0) $ exisitiert mit \\
+$\gamma (0) = u $ und $\gamma' (0) = v $. \\
+Die Menge aller Tangentialvektoren $T_uM$ heißt Tangentialraum.
+\end{definition}
+
+\begin{sa}
+Sei $M \in \mathbb{R}^n $ eine d-dimensionale Mannigfaltigkeit, \\
+$u \in M $, $ \varphi : V \rightarrow U $ der zugehörige Parameter um $u$ \\
+$\Longrightarrow T_uM $ ist d-dimensionaler $( \mathbb{R}-) $ Vektorraum und \\
+    \begin{equation}
+    T_uM = \underbrace{\varphi'(x)}_{L \left( \mathbb{R}^d, \mathbb{R}^n \right) }
+    \left( \mathbb{R}^d \right) \text{ für } x = \varphi^{-1} (u) 
+    \end{equation}
+wobei $T_uM$ unabhängig vom speziellen Parameter $\varphi$ ist.
+\end{sa}
+
+\begin{proof}
+Sei $\gamma: (-\delta, \delta) \rightarrow M eine C^1$-Kurve mit $\gamma(0) = u $ \\
+$\Rightarrow g \coloneqq \varphi^{-1} \circ \gamma $ ist $C^1$-Kurve, 
+$g: (-\delta, \delta) \rightarrow \mathbb{R}^d $ mit $ g(0) = x $ und
+    \begin{equation*}
+    \gamma' (0) = \varphi' (x) g'(0) \text{, } \varphi' (x) \text{ist regulär.}
+    \tag{$\spadesuit$}
+    \end{equation*}
+Offenb. liefert auch jede $C^1$-Kurve $g$ in $\mathbb{R}^d $ durch $x$
+eine $C^1$-Kurve $\gamma$ in $M$ mit $(\spadesuit)$ \\
+Die Menge aller Tangentialvektoren $g'(0)$ von $C^1$-Kurven $g$ in $\mathbb{R}^d $
+ist offenbar $\mathbb{R}^d $ \\
+$\Rightarrow $ 
+29.4 $ \xRightarrow{\varphi' (x) \text{ ist regulär}} \textit{dim } T_uM = d $ \\
+da $(\spadesuit)$ für jeden Parameter $\varphi$ gilt, ist $T_uM$ unabhängig von $\varphi$.
+\end{proof}
+
+\textbf{Bemerkung:}
+\par \noindent
+Man bezeichnet auch $(u, T_uM) \subset M \times \mathbb{R}^n$
+als Tangentialraum und \\
+$TM = \bigcup\limits_{U \in M} (u, T_uM) \subset M \times \mathbb{R}^n $
+als Tangentialbündel.
+
+\begin{beispiel}
+Sei $M \subset \mathbb{R}^n $ offen  \\
+$\Rightarrow $ $M$ ist ist n-dimensionale Mannigfaltigkeit und 
+$T_uM = \mathbb{R}^n \forall u \in M $
+\end{beispiel}
+
+\begin{definition}
+Sei $M \subset \mathbb{R}^n $ d-dimensinale Mannigfaltigkeit. \\
+Ein Vektor $w \in \mathbb{R}^n $ heißt \textbf{Normalenvektor} in $u \in M $ an $M$, falls\\
+$\langle w,v \rangle = 0 \forall v \in T_uM $
+(d.h. $w \bot v \forall v \in T_uM$) \\
+Die Menge aller Normalenvektoren $N_uM = T_uM^{\bot} $ heißt \\
+\textbf{Normalenraum} von $M$ in $u$. 
+\end{definition}
