@@ -14,15 +14,16 @@ Diese Vorlesung wird sich mit folgenden Tehmen befassen:
 \setcounter{section}{28}
 
 \section{Mannigfaltigkeiten}
-Sei $\varphi\in C^q(V,\mathbb{R}^n)$ mit $q\in\mathbb{N}_{\geq 1}$, also 
-$q$-fach stetig differenzierbar, wobei $V\subset\mathbb{R}^d$ offen ist, 
+Sei $\varphi\in C^q(V,\mathbb{R}^n)$ mit $q\in\mathbb{N}_{\geq 1}$, 
+also $q$-fach stetig differenzierbar, wobei $V\subset\mathbb{R}^d$ offen ist, 
 dann heißt $\varphi$ \textbf{regulär}, falls
     \begin{equation}
     \varphi'(x):\mathbb{R}^d\rightarrow\mathbb{R}^n \ \text{regulär (d.h. injektiv)}
     \end{equation}
 Falls $\varphi$ regulär für alle $x\in V$ ist, heißt es auch 
-\textbf{regulär auf V} beziehungsweise \textbf{reguläre $C^q$-Parametrisierung} 
-(manchmal auch $C^q$-Immersion). $V$ ist dann der \textbf{Parameterbereich} von $\varphi$.\\
+\textbf{regulär auf V} beziehungsweise \\
+\textbf{reguläre $C^q$-Parametrisierung} (manchmal auch $C^q$-Immersion). \\
+$V$ ist dann der \textbf{Parameterbereich} von $\varphi$.\\
 \emph{Bemerkung:} $\varphi(V)$ wird selten auch \textbf{Spur} von $\varphi$ genannt.\\
 \linebreak
 \linebreak
@@ -30,36 +31,47 @@ Aus der Linearen Algebra wissen wir, dass aus (29.1) sofort
     \begin{equation}
     d\leq n
     \end{equation}
-folgt. Dies sei in Kapitel VIII immer erfüllt! (29.2) ist außerdem äquivalent dazu, dass $\rang \varphi'(x)=d$.\\
+folgt. Dies sei in Kapitel VIII immer erfüllt! (29.2) ist außerdem äquivalent dazu, dass 
+$\rang \varphi'(x)=d$.\\
     \includegraphics[scale=0.5]{pictures/MA2_0001}
 
 \begin{beispiel}[reguläre Kurven $\varphi:I\subset\mathbb{R}\rightarrow\mathbb{R}^n$]
-Dabei ist $I$ offen und der Tagentialvektor nirgendwo identisch mit dem Nullvektor, also $\varphi'(x)\neq 0$
+Dabei ist $I$ offen und der Tagentialvektor nirgendwo identisch mit dem Nullvektor, also 
+$\varphi'(x)\neq 0$
 
 \begin{enumerate}
     \item $\varphi:(0,2\pi)\rightarrow\mathbb{R}^2$ mit $\varphi(t)=\begin{pmatrix}
         \cos kt \\ \sin kt
     \end{pmatrix}$ und $k\in\mathbb{N}_{\geq 2}$\\
 
-\begin{center}\includegraphics[scale=0.3]{pictures/MA2_0002}\\ \end{center}
+\begin{center}\includegraphics[scale=0.3]{pictures/MA2_0002}\\ 
+\end{center}
 
-Der Einheitskreis wird hier k-mal durchlaufen. Da $\varphi'(x)\neq 0$, ist $\varphi$ regulär.
-    \item $\varphi(-\pi,\pi)\rightarrow\mathbb{R}^2$ mit $\varphi(t)=(1+2\cos t)\begin{pmatrix}
-        \cos t \\ \sin t
-\end{pmatrix}$\\
+Der Einheitskreis wird hier k-mal durchlaufen. 
+Da $\varphi'(x)\neq 0$, ist $\varphi$ regulär.
+\item $\varphi(-\pi,\pi)\rightarrow\mathbb{R}^2$ mit $\varphi(t)=(1+2\cos t)
+    \begin{pmatrix}
+    \cos t \\ \sin t
+    \end{pmatrix}$\\
 
-    \begin{center}
-    \includegraphics[scale=0.3]{pictures/MA2_0003}\\
-    \end{center}
+\begin{center}
+\includegraphics[scale=0.3]{pictures/MA2_0003}\\
+\end{center}
 
-$\varphi(\pm\frac{2\pi}{3})=\begin{pmatrix}
-0 \\ 0
-\end{pmatrix}, \ \varphi(0)=\begin{pmatrix}
-3 \\ 0
-\end{pmatrix}$\\
-$\begin{pmatrix}
-1 \\ 0
-\end{pmatrix}$ \ gehört \textbf{nicht} zur Kurve ("$=\varphi(\pm\pi)$") und $\varphi$ ist regulär.
+$\varphi(\pm\frac{2\pi}{3})=
+    \begin{pmatrix}
+    0 \\ 0
+    \end{pmatrix}
+$, $ 
+\varphi(0)=
+    \begin{pmatrix}
+    3 \\ 0
+    \end{pmatrix}
+$\\$
+    \begin{pmatrix}
+    1 \\ 0
+    \end{pmatrix} $ 
+\ gehört \textbf{nicht} zur Kurve ("$=\varphi(\pm\pi)$") und $\varphi$ ist regulär.
 
 \item $\varphi:(-1,1)\rightarrow\mathbb{R}^2$ \ mit \ $\varphi(t)=\begin{pmatrix}
     t^3 \\ t^2
