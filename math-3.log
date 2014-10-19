@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.11.11)  19 OCT 2014 22:44
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.11.11)  19 OCT 2014 23:31
 entering extended mode
 **math-3.tex
 
@@ -1115,23 +1115,44 @@ Overfull \hbox (30.0pt too wide) in paragraph at lines 92--92
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--104
+Overfull \hbox (2.83183pt too wide) in paragraph at lines 93--95
+$\FML/futm/m/it/12 u \FMS/futm/m/n/12 2 \FML/futm/m/it/12 M$ \T1/futs/m/n/12 ei
+-ne Um-ge-bung $[]$ be-züg-lich des $\U/futm/m/n/12 R[]$\T1/futs/m/n/12 , so wi
+e ei-ne Funk-ti-on $\FML/futm/m/it/12 f \FMS/futm/m/n/12 2 \FML/futm/m/it/12 C[
+] []$
+ []
+
+
+Overfull \hbox (1.2837pt too wide) in paragraph at lines 102--105
+\T1/futs/m/n/12 ge-zeigt, näm-lich, dass je-de $\FML/futm/m/it/12 C[]$\T1/futs/
+m/n/12 -Mannigfaltigkeit im-mer gleich-zei-tig Ni-veau-men-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--105
 
  []
 
 
-Overfull \hbox (2.12474pt too wide) in paragraph at lines 105--111
-\T1/futs/m/n/12 Folglich ist $\FML/futm/m/it/12 M [] []$ \T1/futs/m/n/12 ei-ne 
-d-dimensionale $\FML/futm/m/it/12 C[]$\T1/futs/m/n/12 -Mannigfaltigkeit, falls
+Underfull \hbox (badness 10000) in paragraph at lines 102--105
+
+ []
+
+
+Overfull \hbox (15.197pt too wide) in paragraph at lines 106--108
+[]\T1/cmss/bx/n/12 Definition (Re-gu-lä-rer Wert) []$\FML/futm/m/it/12 c \FMS/f
+utm/m/n/12 2 \U/futm/m/n/12 R[]$ \T1/futs/m/n/12 heiÿt \T1/futs/b/n/12 re-gu-lä
+-rer Wert \T1/futs/m/n/12 von $\FML/futm/m/it/12 f \FMS/futm/m/n/12 2 \FML/futm
+/m/it/12 C[] []$
  []
 
 [15]
-Overfull \hbox (30.0pt too wide) in paragraph at lines 127--127
+Overfull \hbox (30.0pt too wide) in paragraph at lines 130--130
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 128--135
+Underfull \hbox (badness 10000) in paragraph at lines 131--138
 
  []
 
@@ -1139,26 +1160,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 128--135
 File: pictures/MA2_0012.png Graphic file (type png)
 
 <use pictures/MA2_0012.png>
-Package pdftex.def Info: pictures/MA2_0012.png used on input line 136.
+Package pdftex.def Info: pictures/MA2_0012.png used on input line 139.
 (pdftex.def)             Requested size: 339.26666pt x 174.15019pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 148--154
+ [16]
+Underfull \hbox (badness 10000) in paragraph at lines 151--157
 
  []
 
-<pictures/MA2_0013.png, id=83, 517.935pt x 215.80624pt>
+<pictures/MA2_0013.png, id=86, 517.935pt x 215.80624pt>
 File: pictures/MA2_0013.png Graphic file (type png)
 
 <use pictures/MA2_0013.png>
-Package pdftex.def Info: pictures/MA2_0013.png used on input line 155.
+Package pdftex.def Info: pictures/MA2_0013.png used on input line 158.
 (pdftex.def)             Requested size: 258.96686pt x 107.90285pt.
- [16]
-Overfull \hbox (30.0pt too wide) in paragraph at lines 159--159
+
+Overfull \hbox (30.0pt too wide) in paragraph at lines 162--162
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--163
+Underfull \hbox (badness 10000) in paragraph at lines 163--166
 
  []
 
@@ -1169,13 +1190,13 @@ nts/Uni/Module/MA-II_Mathematik II/Mathematik fÃ¼r Physiker/Git/math-3/pictures
 ("C:\Users\Lukas KÃ¶rber\Documents\Uni\Module\MA-II_Mathematik II\Mathematik fÃ
 ¼r Physiker\Git\math-3\math-3.aux") ) 
 Here is how much of TeX's memory you used:
- 5334 strings out of 493921
- 70408 string characters out of 3147329
- 225956 words of memory out of 3000000
- 8465 multiletter control sequences out of 15000+200000
+ 5333 strings out of 493921
+ 70384 string characters out of 3147329
+ 223956 words of memory out of 3000000
+ 8464 multiletter control sequences out of 15000+200000
  135203 words of font info for 114 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 28i,10n,43p,694b,368s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 28i,10n,43p,698b,368s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvi
 ps/fontname/8r.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-sup
 er-t1.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/fourier/fourier-bb.pf
@@ -1187,7 +1208,7 @@ type1/adobe/utopia/putbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/u
 topia/putr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.p
 fb><C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb><C:/Progra
 m Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfsx1200.pfb>
-Output written on math-3.pdf (18 pages, 277712 bytes).
+Output written on math-3.pdf (18 pages, 278949 bytes).
 PDF statistics:
  129 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

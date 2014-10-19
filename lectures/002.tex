@@ -63,7 +63,7 @@ erfüllt.
 Dies ist eine Charakterisierung, die den umgebenden Raum nutzt und oft auch als Definition von $C^q$-Mannigfaltigkeiten verwendet wird.
     
 \begin{proof}
-Für die Rückrichtung schränken wir $\psi $ auf $\tilde{U} \cap M $ und erhalten sofort Karten, was die Behauptung bestätigt. Für die Hinrichtung fixieren wir ein $\tilde{u} \in M $ und wählen wieder $\tilde{U} \subset M $, $W \subset \mathbb{R}^d $ und ein $f \in C^q \left( W, \mathbb{R}^{n-d} \right)$. Gemäß Satz 29.1 setzen wir o.B.d.A $\pi = $ \textit{id} und zerlegen $\tilde{u} = \left( \tilde{v}, f \left( \tilde{v} \right) \right) \in \mathbb{R}^d \times \mathbb{R}^{n-d}$. Nun sei $\hat{U} \coloneqq W \times \mathbb{R}^{n-d} \eqqcolon \hat{V} $, welches den \emph{Zylinder} aus $U$ und $W$ in Beweis zu Satz 29.1 liefert.
+Für die Rückrichtung schränken wir $\psi $ auf $\tilde{U} \cap M $ ein und erhalten sofort Karten, was die Behauptung bestätigt. Für die Hinrichtung fixieren wir ein $\tilde{u} \in M $ und wählen wieder $\tilde{U} \subset M $, $W \subset \mathbb{R}^d $ und ein $f \in C^q \left( W, \mathbb{R}^{n-d} \right)$. Gemäß Satz 29.1 setzen wir o.B.d.A $\pi = $ \textit{id} und zerlegen $\tilde{u} = \left( \tilde{v}, f \left( \tilde{v} \right) \right) \in \mathbb{R}^d \times \mathbb{R}^{n-d}$. Nun sei $\hat{U} \coloneqq W \times \mathbb{R}^{n-d} \eqqcolon \hat{V} $, welches den \emph{Zylinder} aus $U$ und $W$ in Beweis zu Satz 29.1 liefert.
 Setzen wir schließlich noch $\tilde{\varphi}: \hat{V} \rightarrow \hat{U} $ mit
 \begin{equation*}
 \tilde{\varphi} (v,w) \coloneqq (v, f(v) + w)
@@ -89,28 +89,31 @@ Sei $M \subset \mathbb{R}^n$ eine d-dimensionale $C^q$-Mannigfaltigkeit und $\va
 Folgt aus Beweisen von Satz 29.1 und 29.2
 \end{proof}
 
-\begin{satz}[lokale Darstellung von Mf als Niveaumenge]
+\begin{satz}[lokale Darstellung von Mannigfaltigkeiten als Niveaumenge]
 \mbox{} \\
-$M \subset \mathbb{R}^n $ sei d-dimensionale $C^q$-Mannigfaltigkeit. \\
-$\Longleftrightarrow \forall u \in M $ existiert eine Umgebing $\tilde{U}$ von $u$
-bezüglich $\mathbb{R}^n$ und \\
-$f \in C^q \left( \tilde{U}, \mathbb{R}^{n-d} \right)$ 
-mit $\textit{rang } f' (u) = n-d $ und \\
-$\tilde{U} \cap M = \left\lbrace \tilde{u} \in \tilde{U} | f (\tilde{u}) = 0 \right\rbrace $
+$M \subset \mathbb{R}^n $ ist genau dann eine d-dimensionale $C^q$-Mannigfaltigkeit, wenn für alle $u \in M $ eine Umgebung $\tilde{U}$ bezüglich des $\mathbb{R}^n$, so wie eine Funktion $f \in C^q \left( \tilde{U}, \mathbb{R}^{n-d} \right)$ mit $\rang f' (u) = n-d $ existiert, sodass 
+
+\begin{equation*}
+\tilde{U} \cap M = \left\lbrace \tilde{u} \in \tilde{U} | f (\tilde{u}) = 0 \right\rbrace
+\end{equation*}
+
 \end{satz}
 
-\textbf{somit:} $M$ ist eine $C^q$-Mannigfaltigkeit genau dann, 
-wenn $M$ die lokale Niveaumenge einer $C^q$-Funktion $f$ ist. \\
+Wir haben hiermit eine weitere wichtige Eigenschaft von Mannigfaltigkeiten gezeigt, nämlich, dass jede $C^q$-Mannigfaltigkeit immer gleichzeitig Niveaumenge einer $C^q$-Funktion ist und umgekehrt!\\
+\linebreak
+Eine durchaus berechtigte Frage ist, ob die Niveaumenge unbedingt der Gleichung $f(u)=0$ genügen muss, oder ob dies auch für andere $c\neq 0$ funktioniert. Aus diesem Grund führen wir einen weiteren Begriff ein:\\
 
-\textbf{Bemerkung:} $c \in \mathbb{R}^{n-d} $ heißt \textit{regulärer Wert} von
-$f \in C^q \left( \tilde{U}, \mathbb{R}^{n-d} \right) $, \\
-$\tilde{U} \subset \mathbb{R}^n $
-offen, falls $\textit{rang } f' (u) = n-d \forall u \in \tilde{U} $ mit $f(u) = c $ \\
-Folglich ist $M \coloneqq \left\lbrace u \in \tilde{U} | f(u) = c \right\rbrace $ 
+\begin{definition}[Regulärer Wert] $c \in \mathbb{R}^{n-d} $ heißt \textbf{regulärer Wert} von
+$f \in C^q \left( \tilde{U}, \mathbb{R}^{n-d} \right) $ (mit $\tilde{U} \subset \mathbb{R}^n $ offen), falls 
+\begin{equation*}
+\rang f' (u) = n-d \ \ \ \ \ \forall u \in \tilde{U}\ \ \ \mathrm{mit}\ \ \ f(u) = c
+\end{equation*}
+
+Vergleichen wir dies nun mit Satz 29.4, so ist jedes $M \coloneqq \left\lbrace u \in \tilde{U} | f(u) = c \right\rbrace $ 
 eine d-dimensionale $C^q$-Mannigfaltigkeit, falls $c$ ein regulärer Wert von $f$ ist.
-
+\end{definition}
 \begin{proof}
-$"\Leftarrow":$ gemäß Bsp. 5 erhält man lokale Parametriesierung \\
+Gemäß Beispiel 5 erhält man mit $f$ eine lokale Parametrisierung. Damit ist die Rückrichtung gezeigt.
 $\Rightarrow$ Behauptung. \\
 $"\Rightarrow":$ fixiere $\tilde{u} \in M$, 
 wähle $\tilde{U}, \tilde{V} \subset \mathbb{R}^n, 
