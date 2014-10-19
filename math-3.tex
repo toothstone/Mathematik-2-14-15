@@ -1,5 +1,5 @@
 \documentclass[a4paper,12pt,portrait]{book}	  
-\title{Mathematik f\"ur Physiker I}
+\title{Mathematik f\"ur Physiker I+II}
 \author{Friedemann Schuricht\\ \\ \"ubertragen von\\Lukas K\"orber und Friedrich Zahn}
 \date{Wintersemester 2014/2015}
 
@@ -9,8 +9,7 @@
 \usepackage{amsmath}
 \usepackage{mathtools}
 \usepackage{amsthm}	 
-\usepackage{graphicx}       % Einbinden von Bildern
-\usepackage{lipsum,multicol}
+\usepackage{graphicx}      
 \usepackage{fancyhdr}
 \usepackage{xcolor}
 \usepackage[upright]{fourier}
@@ -18,84 +17,25 @@
 \usepackage{sectsty}
 \usepackage{lipsum}
 \usepackage{bm}
-%\usepackage{MnSymbol} 
-
-%define operators
-\newcommand{\diff}[2]{\frac{\mathrm{d}{#1}}{\mathrm{d}{#2}}}
-\newcommand{\ddiff}[2]{\frac{\mathrm{d}^2{#1}}{\mathrm{d}{#2}^2}}
-\newcommand{\dddiff}[2]{\frac{\mathrm{d}^3{#1}}{\mathrm{d}{#2}^3}}
-\newcommand{\ndiff}[2]{\frac{\mathrm{d}^n{#1}}{\mathrm{d}{#2}^n}}
-\newcommand{\pdiff}[2]{\frac{\partial{#1}}{\partial{#2}}}
-
-\newcommand{\Int}[4]{\int\limits_{#1}^{#2} #3 \mathrm{d} #4}
-\newcommand{\Oint}[4]{\oint\limits_{#1}^{#2} #3 \mathrm{d} #4}
-
-\newcommand{\bra}[1]{\left\langle #1 \right|}
-\newcommand{\ket}[1]{\left| #1 \right\rangle}
-\newcommand{\lara}[1]{\left\langle #1 \right\rangle}
-\newcommand{\scap}[2]{\left\langle #1 \ \middle| \ #2\right\rangle}
-\newcommand{\exlara}[3]{\left\langle #1 \ \middle| \ #2 \ \middle| \ #3\right\rangle}
-
-\newcommand{\graph}{\text{graph\ }}
-\newcommand{\rang}{\text{rang\ }}
-
-\renewcommand{\sup}{\text{sup\ }}
-\renewcommand{\inf}{\text{inf\ }}
-\renewcommand\qedsymbol{$\textbf{q.e.d.}$}
 
 
-
-\definecolor{dblue}{HTML}{183CE0}
-\definecolor{hblue}{HTML}{0E75F7}
+%layout options
 \sectionfont{\color{hblue}}
 \chapterfont{\color{dblue}}
-
-\newtheoremstyle{theoremstyle} % name
-    {\topsep}                    % Space above
-    {\topsep}                    % Space below
-    {\upshape}                   % Body font
-    {}                           % Indent amount
-    {\sffamily\bfseries}                   % Theorem head font
-    {}                          % Punctuation after theorem head
-    {.5em}                       % Space after theorem head
-    {\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}  % Theorem head spec (can be left empty, meaning ‘normal’)
-
-\theoremstyle{theoremstyle}
-\newtheorem{theo}{Theorem}[section]	% please use "theorem"
-\newtheorem{sa}[theo]{Satz}			% please use "satz"
-\newtheorem{lem}[theo]{Lemma}		% please use "lemma"
-\newtheorem{folgerung}[theo]{Folgerung}
-\newtheorem*{definition}{Definition}
-\newtheorem{beispiel}{Beispiel}
-\newtheorem*{beispiel*}{Beispiel}
-
-\newenvironment{theorem}
-	{\par\nobreak\vfil\penalty0\vfilneg
-   \vtop\bgroup\color{dblue}\noindent\rule{420pt}{2pt}\vspace{5pt}\begin{theo}}
-	{\end{theo}\rule{50pt}{1pt}\color{black}\par\xdef\tpd{\the\prevdepth}\egroup
-   \prevdepth=\tpd}
-\newenvironment{satz}
-	{\par\nobreak\vfil\penalty0\vfilneg
-   \vtop\bgroup\color{dblue}\noindent\rule{420pt}{2pt}\vspace{5pt}\begin{sa}}
-	{\end{sa}\rule{50pt}{1pt}\color{black}\par\xdef\tpd{\the\prevdepth}\egroup
-   \prevdepth=\tpd}
-\newenvironment{lemma}
-	{\par\nobreak\vfil\penalty0\vfilneg
-   \vtop\bgroup\color{dblue}\noindent\rule{420pt}{2pt}\vspace{5pt}\begin{lem}}
-	{\end{lem}\rule{50pt}{1pt}\color{black}\par\xdef\tpd{\the\prevdepth}\egroup
-   \prevdepth=\tpd}
-	
-\begin{document}
-\maketitle
-\tableofcontents
-\pagestyle{fancy}
+\pagestyle{headings}
+\setlength\parindent{0pt}
 \renewcommand{\thechapter}{\Roman{chapter}} 
 \renewcommand*\thesection{\arabic{section}}
 \renewcommand\theequation{\maybe{\arabic{chapter}}\arabic{section}.\arabic{equation}}
 \DeclareRobustCommand\maybe[1]{\ifnum#1=\value{chapter}\relax\else\uppercase\expandafter{\romannumeral#1}.\fi}
+
+\input{operators.tex}
+\input{environments.tex}
+	
+\begin{document}
+\maketitle
+\tableofcontents
 \setcounter{chapter}{7}
-
-
 \input{lectures/001.tex}
 \input{lectures/002.tex}
 

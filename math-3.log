@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.11.11)  18 OCT 2014 21:24
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.11.11)  19 OCT 2014 22:44
 entering extended mode
 **math-3.tex
 
@@ -403,68 +403,16 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen122
 \Gin@req@width=\dimen123
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\lipsum\lipsum.sty"
-Package: lipsum 2011/04/14 v1.2 150 paragraphs of Lorem Ipsum dummy text
-\c@lips@count=\count106
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\multicol.sty"
-Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
-\c@tracingmulticols=\count107
-\mult@box=\box28
-\multicol@leftmargin=\dimen124
-\c@unbalance=\count108
-\c@collectmore=\count109
-\doublecol@number=\count110
-\multicoltolerance=\count111
-\multicolpretolerance=\count112
-\full@width=\dimen125
-\page@free=\dimen126
-\premulticols=\dimen127
-\postmulticols=\dimen128
-\multicolsep=\skip53
-\multicolbaselineskip=\skip54
-\partial@page=\box29
-\last@line=\box30
-\mult@rightbox=\box31
-\mult@grightbox=\box32
-\mult@gfirstbox=\box33
-\mult@firstbox=\box34
-\@tempa=\box35
-\@tempa=\box36
-\@tempa=\box37
-\@tempa=\box38
-\@tempa=\box39
-\@tempa=\box40
-\@tempa=\box41
-\@tempa=\box42
-\@tempa=\box43
-\@tempa=\box44
-\@tempa=\box45
-\@tempa=\box46
-\@tempa=\box47
-\@tempa=\box48
-\@tempa=\box49
-\@tempa=\box50
-\@tempa=\box51
-\c@columnbadness=\count113
-\c@finalcolumnbadness=\count114
-\last@try=\dimen129
-\multicolovershoot=\dimen130
-\multicolundershoot=\dimen131
-\mult@nat@firstbox=\box52
-\colbreak@box=\box53
-\multicol@sort@counter=\count115
-)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
-\fancy@headwidth=\skip55
-\f@ncyO@elh=\skip56
-\f@ncyO@erh=\skip57
-\f@ncyO@olh=\skip58
-\f@ncyO@orh=\skip59
-\f@ncyO@elf=\skip60
-\f@ncyO@erf=\skip61
-\f@ncyO@olf=\skip62
-\f@ncyO@orf=\skip63
+\fancy@headwidth=\skip53
+\f@ncyO@elh=\skip54
+\f@ncyO@erh=\skip55
+\f@ncyO@olh=\skip56
+\f@ncyO@orh=\skip57
+\f@ncyO@elf=\skip58
+\f@ncyO@erf=\skip59
+\f@ncyO@olf=\skip60
+\f@ncyO@orf=\skip61
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
@@ -766,7 +714,7 @@ Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
 \XKV@toks=\toks28
 \XKV@tempa@toks=\toks29
-\XKV@depth=\count116
+\XKV@depth=\count106
 File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
 ))
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
@@ -776,6 +724,10 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
 les
 )
+("C:\Program Files\MiKTeX 2.9\tex\latex\lipsum\lipsum.sty"
+Package: lipsum 2011/04/14 v1.2 150 paragraphs of Lorem Ipsum dummy text
+\c@lips@count=\count107
+)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\bm.sty"
 Package: bm 2004/02/26 v1.1c Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup6
@@ -784,9 +736,13 @@ Package: bm 2004/02/26 v1.1c Bold Symbol Support (DPC/FMi)
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 138.
 LaTeX Info: Redefining \bm on input line 204.
 )
-\c@theo=\count117
-\c@beispiel=\count118
-
+("C:\Users\Lukas K√∂rber\Documents\Uni\Module\MA-II_Mathematik II\Mathematik f√
+ºr Physiker\Git\math-3\operators.tex")
+("C:\Users\Lukas K√∂rber\Documents\Uni\Module\MA-II_Mathematik II\Mathematik f√
+ºr Physiker\Git\math-3\environments.tex"
+\c@theo=\count108
+\c@beispiel=\count109
+)
 
 LaTeX Warning: Unused global option(s):
     [portrait].
@@ -794,85 +750,85 @@ LaTeX Warning: Unused global option(s):
 
 ("C:\Users\Lukas K√∂rber\Documents\Uni\Module\MA-II_Mathematik II\Mathematik f√
 ºr Physiker\Git\math-3\math-3.aux")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 87.
-LaTeX Font Info:    Try loading font information for FML+futm on input line 87.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 35.
+LaTeX Font Info:    Try loading font information for FML+futm on input line 35.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\fmlfutm.fd"
 File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
 )
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 87.
-LaTeX Font Info:    Try loading font information for FMS+futm on input line 87.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 35.
+LaTeX Font Info:    Try loading font information for FMS+futm on input line 35.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\fmsfutm.fd"
 File: fmsfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FMS/futm.
 )
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 87.
-LaTeX Font Info:    Try loading font information for FMX+futm on input line 87.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 35.
+LaTeX Font Info:    Try loading font information for FMX+futm on input line 35.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\fmxfutm.fd"
 File: fmxfutm.fd futm-extension
 )
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 87.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 87.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 35.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Try loading font information for T1+futs on input line 87.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Try loading font information for T1+futs on input line 35.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\t1futs.fd"
 File: t1futs.fd 2004/03/02 Fontinst v1.926 font definitions for T1/futs.
 )
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count119
-\scratchdimen=\dimen132
-\scratchbox=\box54
-\nofMPsegments=\count120
-\nofMParguments=\count121
+\scratchcounter=\count110
+\scratchdimen=\dimen124
+\scratchbox=\box28
+\nofMPsegments=\count111
+\nofMParguments=\count112
 \everyMPshowfont=\toks30
-\MPscratchCnt=\count122
-\MPscratchDim=\dimen133
-\MPnumerator=\count123
-\makeMPintoPDFobject=\count124
+\MPscratchCnt=\count113
+\MPscratchDim=\dimen125
+\MPnumerator=\count114
+\makeMPintoPDFobject=\count115
 \everyMPtoPDFconversion=\toks31
 )
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 13.24796pt on input line 88.
+(Font)              scaled to size 13.24796pt on input line 36.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 88.
+(Font)              scaled to size 9.19998pt on input line 36.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 88.
-LaTeX Font Info:    Try loading font information for FML+futmi on input line 88
+(Font)              scaled to size 7.35999pt on input line 36.
+LaTeX Font Info:    Try loading font information for FML+futmi on input line 36
 .
  ("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\fmlfutmi.fd"
 File: fmlfutmi.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futmi.
 )
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 13.24796pt on input line 88.
+(Font)              scaled to size 13.24796pt on input line 36.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 88.
+(Font)              scaled to size 9.19998pt on input line 36.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 88.
+(Font)              scaled to size 7.35999pt on input line 36.
  [1
 
 
@@ -880,7 +836,7 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
 
 ]
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 89.
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 37.
 
 ("C:\Users\Lukas K√∂rber\Documents\Uni\Module\MA-II_Mathematik II\Mathematik f√
 ºr Physiker\Git\math-3\math-3.toc"
@@ -907,14 +863,7 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
 \tf@toc=\write3
 
 ("C:\Users\Lukas K√∂rber\Documents\Uni\Module\MA-II_Mathematik II\Mathematik f√
-ºr Physiker\Git\math-3\lectures/001.tex" [3]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[4
+ºr Physiker\Git\math-3\lectures/001.tex" [3] [4
 
 ]
 Overfull \hbox (3.11896pt too wide) in paragraph at lines 8--10
@@ -922,14 +871,7 @@ Overfull \hbox (3.11896pt too wide) in paragraph at lines 8--10
 er-ti-gen Funk-tio-nen und z.B.
  []
 
-[5]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[6
+[5] [6
 
 ]
 Kapitel VIII.
@@ -1002,12 +944,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 90--92
 
  []
 
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
 [8 <C:/Users/Lukas K√∂rber/Documents/Uni/Module/MA-II_Mathematik II/Mathematik 
 f√ºr Physiker/Git/math-3/pictures/001-02.png> <C:/Users/Lukas K√∂rber/Documents
 /Uni/Module/MA-II_Mathematik II/Mathematik f√ºr Physiker/Git/math-3/pictures/00
@@ -1054,12 +990,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--112
 
  []
 
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
 [9 <C:/Users/Lukas K√∂rber/Documents/Uni/Module/MA-II_Mathematik II/Mathematik 
 f√ºr Physiker/Git/math-3/pictures/001-05.png> <C:/Users/Lukas K√∂rber/Documents
 /Uni/Module/MA-II_Mathematik II/Mathematik f√ºr Physiker/Git/math-3/pictures/00
@@ -1087,12 +1017,6 @@ s/m/n/12 ) \FMS/futm/m/n/12 Å$
  []
 
 
-Overfull \hbox (1.69086pt too wide) in paragraph at lines 128--129
-[]\T1/futs/m/it/12 Wiederholung: Ei-ne ste-ti-ge Ab-bil-dung heiˇt ho-mˆo-morph
-, falls ei-ne Um-kehr-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 128--129
 
  []
@@ -1113,12 +1037,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 138--143
 
  []
 
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
 [10 <C:/Users/Lukas K√∂rber/Documents/Uni/Module/MA-II_Mathematik II/Mathematik
  f√ºr Physiker/Git/math-3/pictures/001-07.png> <C:/Users/Lukas K√∂rber/Document
 s/Uni/Module/MA-II_Mathematik II/Mathematik f√ºr Physiker/Git/math-3/pictures/0
@@ -1138,12 +1056,6 @@ File: pictures/001-09.png Graphic file (type png)
 Package pdftex.def Info: pictures/001-09.png used on input line 165.
 (pdftex.def)             Requested size: 289.07928pt x 131.9928pt.
 
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
 [11]
 LaTeX Font Info:    Font shape `T1/futs/bx/it' in size <12> not available
 (Font)              Font shape `T1/futs/b/it' tried instead on input line 180.
@@ -1159,145 +1071,111 @@ Overfull \hbox (30.0pt too wide) in paragraph at lines 1--1
 [] 
  []
 
-
-Overfull \hbox (10.21577pt too wide) in paragraph at lines 16--29
-$\FML/futm/m/it/12 '[]\T1/futs/m/n/12 (\FML/futm/m/it/12 x\T1/futs/m/n/12 )$ is
-t re-gu-l‰r $[] \FML/futm/m/it/12 '[]\T1/futs/m/n/12 ([]) \FMS/futm/m/n/12  \U
-/futm/m/n/12 R[]$ \T1/futs/m/n/12 ist re-gu-l‰r f¸r $\FML/futm/m/it/12 '\T1/fut
-s/m/n/12 (\FML/futm/m/it/12 x\T1/futs/m/n/12 ) \FMS/futm/m/n/12 Å []$ 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 16--29
-
- []
-
-<pictures/MA2_0010.png, id=63, 734.745pt x 230.8625pt>
+[12 <C:/Users/Lukas K√∂rber/Documents/Uni/Module/MA-II_Mathematik II/Mathematik
+ f√ºr Physiker/Git/math-3/pictures/001-09.png>]
+<pictures/MA2_0010.png, id=68, 734.745pt x 230.8625pt>
 File: pictures/MA2_0010.png Graphic file (type png)
 
 <use pictures/MA2_0010.png>
-Package pdftex.def Info: pictures/MA2_0010.png used on input line 30.
+Package pdftex.def Info: pictures/MA2_0010.png used on input line 24.
 (pdftex.def)             Requested size: 367.3716pt x 115.43095pt.
+ [13 <C:/Users/Lukas K√∂rber/Documents/Uni/Module/MA-II_Mathematik II/Mathemati
+k f√ºr Physiker/Git/math-3/pictures/MA2_0010.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 37--40
+
+ []
 
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
+Underfull \hbox (badness 10000) in paragraph at lines 45--48
 
-[12 <C:/Users/Lukas K√∂rber/Documents/Uni/Module/MA-II_Mathematik II/Mathematik
- f√ºr Physiker/Git/math-3/pictures/001-09.png>]
-Overfull \hbox (30.0pt too wide) in paragraph at lines 51--51
+ []
+
+
+Overfull \hbox (30.0pt too wide) in paragraph at lines 50--50
 [] 
  []
 
-<pictures/MA2_0011.png, id=69, 776.9025pt x 211.79124pt>
+<pictures/MA2_0011.png, id=74, 776.9025pt x 211.79124pt>
 File: pictures/MA2_0011.png Graphic file (type png)
 
 <use pictures/MA2_0011.png>
-Package pdftex.def Info: pictures/MA2_0011.png used on input line 64.
+Package pdftex.def Info: pictures/MA2_0011.png used on input line 59.
 (pdftex.def)             Requested size: 388.45029pt x 105.89536pt.
-
-Overfull \hbox (2.51953pt too wide) in paragraph at lines 68--69
-\T1/futs/m/n/12 um-ge-ben-den Raum und wird h‰u-fig als De-fi-ni-ti-on der Man-
-nig-fal-tig-keit be-nutzt. 
+ [14 <C:/Users/Lukas K√∂rber/Documents/Uni/Module/MA-II_Mathematik II/Mathemati
+k f√ºr Physiker/Git/math-3/pictures/MA2_0011.png>]
+Overfull \hbox (1.13748pt too wide) in paragraph at lines 78--82
+$\FML/futm/m/it/12 C[] []$ \T1/futs/m/n/12 exi-si-tiert. We-gen $[] [] \FMS/fut
+m/m/n/12 Å [] \ \FML/futm/m/it/12 M$ \T1/futs/m/n/12 folgt die Be-haup-tung.[] 
+ [] 
  []
 
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[13 <C:/Users/Lukas K√∂rber/Documents/Uni/Module/MA-II_Mathematik II/Mathematik
- f√ºr Physiker/Git/math-3/pictures/MA2_0010.png> <C:/Users/Lukas K√∂rber/Docume
-nts/Uni/Module/MA-II_Mathematik II/Mathematik f√ºr Physiker/Git/math-3/pictures
-/MA2_0011.png>]
-Overfull \hbox (30.0pt too wide) in paragraph at lines 111--111
+Overfull \hbox (30.0pt too wide) in paragraph at lines 92--92
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--123
+Underfull \hbox (badness 10000) in paragraph at lines 102--104
 
  []
 
 
-Overfull \hbox (2.12474pt too wide) in paragraph at lines 124--130
+Overfull \hbox (2.12474pt too wide) in paragraph at lines 105--111
 \T1/futs/m/n/12 Folglich ist $\FML/futm/m/it/12 M [] []$ \T1/futs/m/n/12 ei-ne 
 d-dimensionale $\FML/futm/m/it/12 C[]$\T1/futs/m/n/12 -Mannigfaltigkeit, falls
  []
 
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[14]
-Overfull \hbox (30.0pt too wide) in paragraph at lines 146--146
+[15]
+Overfull \hbox (30.0pt too wide) in paragraph at lines 127--127
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--154
+Underfull \hbox (badness 10000) in paragraph at lines 128--135
 
  []
 
-<pictures/MA2_0012.png, id=79, 678.535pt x 348.30125pt>
+<pictures/MA2_0012.png, id=82, 678.535pt x 348.30125pt>
 File: pictures/MA2_0012.png Graphic file (type png)
 
 <use pictures/MA2_0012.png>
-Package pdftex.def Info: pictures/MA2_0012.png used on input line 155.
+Package pdftex.def Info: pictures/MA2_0012.png used on input line 136.
 (pdftex.def)             Requested size: 339.26666pt x 174.15019pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--173
+Underfull \hbox (badness 10000) in paragraph at lines 148--154
 
  []
 
-<pictures/MA2_0013.png, id=80, 517.935pt x 215.80624pt>
+<pictures/MA2_0013.png, id=83, 517.935pt x 215.80624pt>
 File: pictures/MA2_0013.png Graphic file (type png)
 
 <use pictures/MA2_0013.png>
-Package pdftex.def Info: pictures/MA2_0013.png used on input line 174.
+Package pdftex.def Info: pictures/MA2_0013.png used on input line 155.
 (pdftex.def)             Requested size: 258.96686pt x 107.90285pt.
-
-Overfull \hbox (30.0pt too wide) in paragraph at lines 178--178
+ [16]
+Overfull \hbox (30.0pt too wide) in paragraph at lines 159--159
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 179--182
+Underfull \hbox (badness 10000) in paragraph at lines 160--163
 
  []
 
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[15 <C:/Users/Lukas K√∂rber/Documents/Uni/Module/MA-II_Mathematik II/Mathematik
+[17 <C:/Users/Lukas K√∂rber/Documents/Uni/Module/MA-II_Mathematik II/Mathematik
  f√ºr Physiker/Git/math-3/pictures/MA2_0012.png> <C:/Users/Lukas K√∂rber/Docume
 nts/Uni/Module/MA-II_Mathematik II/Mathematik f√ºr Physiker/Git/math-3/pictures
-/MA2_0013.png>])
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[16]
+/MA2_0013.png>]) [18]
 ("C:\Users\Lukas K√∂rber\Documents\Uni\Module\MA-II_Mathematik II\Mathematik f√
 ºr Physiker\Git\math-3\math-3.aux") ) 
 Here is how much of TeX's memory you used:
- 5447 strings out of 493921
- 71711 string characters out of 3147329
- 230789 words of memory out of 3000000
- 8581 multiletter control sequences out of 15000+200000
- 175064 words of font info for 141 fonts, out of 3000000 for 9000
+ 5334 strings out of 493921
+ 70408 string characters out of 3147329
+ 225956 words of memory out of 3000000
+ 8465 multiletter control sequences out of 15000+200000
+ 135203 words of font info for 114 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 30i,13n,43p,395b,425s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 28i,10n,43p,694b,368s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvi
 ps/fontname/8r.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-sup
 er-t1.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/fourier/fourier-bb.pf
@@ -1309,9 +1187,9 @@ type1/adobe/utopia/putbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/u
 topia/putr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.p
 fb><C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb><C:/Progra
 m Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfsx1200.pfb>
-Output written on math-3.pdf (16 pages, 274767 bytes).
+Output written on math-3.pdf (18 pages, 277712 bytes).
 PDF statistics:
- 123 PDF objects out of 1000 (max. 8388607)
+ 129 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  66 words of extra memory for PDF output out of 10000 (max. 10000000)
 

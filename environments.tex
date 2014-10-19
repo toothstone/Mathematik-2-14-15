@@ -1,0 +1,41 @@
+\usepackage{xcolor}
+\usepackage{amsthm}	 
+
+
+\definecolor{dblue}{HTML}{183CE0}
+\definecolor{hblue}{HTML}{0E75F7}
+
+\newtheoremstyle{theoremstyle} % name
+    {\topsep}                    % Space above
+    {\topsep}                    % Space below
+    {\upshape}                   % Body font
+    {}                           % Indent amount
+    {\sffamily\bfseries}                   % Theorem head font
+    {}                          % Punctuation after theorem head
+    {.5em}                       % Space after theorem head
+    {\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}  % Theorem head spec (can be left empty, meaning ‘normal’)
+
+\theoremstyle{theoremstyle}
+\newtheorem{theo}{Theorem}[section]	% please use "theorem"
+\newtheorem{sa}[theo]{Satz}			% please use "satz"
+\newtheorem{lem}[theo]{Lemma}		% please use "lemma"
+\newtheorem{folgerung}[theo]{Folgerung}
+\newtheorem*{definition}{Definition}
+\newtheorem{beispiel}{Beispiel}
+\newtheorem*{beispiel*}{Beispiel}
+
+\newenvironment{theorem}
+	{\par\nobreak\vfil\penalty0\vfilneg
+   \vtop\bgroup\color{dblue}\noindent\rule{420pt}{2pt}\vspace{5pt}\begin{theo}}
+	{\end{theo}\rule{50pt}{1pt}\color{black}\par\xdef\tpd{\the\prevdepth}\egroup
+   \prevdepth=\tpd}
+\newenvironment{satz}
+	{\par\nobreak\vfil\penalty0\vfilneg
+   \vtop\bgroup\color{dblue}\noindent\rule{420pt}{2pt}\vspace{5pt}\begin{sa}}
+	{\end{sa}\rule{50pt}{1pt}\color{black}\par\xdef\tpd{\the\prevdepth}\egroup
+   \prevdepth=\tpd}
+\newenvironment{lemma}
+	{\par\nobreak\vfil\penalty0\vfilneg
+   \vtop\bgroup\color{dblue}\noindent\rule{420pt}{2pt}\vspace{5pt}\begin{lem}}
+	{\end{lem}\rule{50pt}{1pt}\color{black}\par\xdef\tpd{\the\prevdepth}\egroup
+   \prevdepth=\tpd}

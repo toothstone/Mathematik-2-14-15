@@ -1,114 +1,95 @@
 \begin{satz}[lokale Darstellung einer Mannigfaltigkeit als Graph]
 \mbox{} \\
-Sei $M \subset \mathbb{R}^{n}$ eine d-dimensionale $C^{q}$-Mannigfaltigkeit. \\
-$\Longleftrightarrow \forall u \in M \subset \mathbb{R}^n $ existiert eine Umgebung
-$U$ von $u$  bezüglich $M$, $W \subset \mathbb{R}^n $ offen, 
-$f \in C^q (W, \mathbb{R}^{n-d})$ und eine Permutation $\pi$ von Koordinaten in
-$\mathbb{R}^n $ mit $ \psi (W) = U $ für $ \psi (v) \coloneqq \psi (v, f(v)) 
-\forall v \in W $ (das heißt $U$ ist Graph von f).
+$M \subset \mathbb{R}^{n}$ ist genau dann eine d-dimensionale $C^{q}$-Mannigfaltigkeit, wenn für alle $u\in M\subset\mathbb{R}^n$ eine Umgebung $U$ von $u$ bezüglich $M$ und eine offene Menge $W\subset\mathbb{R}^d$ existiert, sodass (gegebenefalls unter einer Koordinatenpermutation $\pi$ im $\mathbb{R}^n$) für mindenstens ein $f \in C^q (W, \mathbb{R}^{n-d})$ ein $\psi$ mit $\psi[W]=U$ existiert, das
+\begin{equation*}
+\psi(v)\coloneqq\pi(v,f(v)) \ \ \ \ \forall v\in W
+\end{equation*}
+erfüllt. (d.h. $U=\graph f$)
+
 \end{satz}
 
-\textbf{somit:} $M$ ist $C^q$-Mannigfaltigkeit genau dann, wenn $M$ lokaler Graph
-einer $C^q$-Funktion $f$ ist (vergleiche Beispiel 2 und 4).
+Wir können also sagen, dass sich jede $C^q$-Mannigfaltigkeit \emph{lokal} als Graph einer $C^q$-Funktion darstellen lassen können muss. Die Umkehrung ist genauso richtig. So ist also jeder Graph einer $C^q$-Funktion gleichzeitig Mannigfaltigkeit.
 
 \begin{proof}
 
-$"\Leftarrow"$: folgt aus Beispielen 2 und 4. \\
-$"\Rightarrow"$: fixiere $\tilde{u} \in M $, sei $\varphi : \tilde{V} \in \mathbb{R}^d
-\rightarrow \tilde{U} \subset \mathbb{R}^n $ und der zugehörige $C^q$-Parameter 
-$\tilde{u} = \varphi (\tilde{x})$ \\
-$\varphi' (x)$ ist regulär $\xRightarrow{\text{ evtl. $\pi$ der Zeilen }} \varphi_I ' 
-(\tilde{x}) \subseteq \mathbb{R}^{d \times d} $ ist regulär für $\varphi (x) =
-    \begin{pmatrix}
-    \varphi_I (x) \left[ \in \mathbb{R}^d \right]\\
-    \varphi_{II} (x) \left[ \in \mathbb{R}^{n-d} \right]
-    \end{pmatrix}
-$ \\
-Zerlege $u = \pi (v,w) $ mit $v \in \mathbb{R}^d $, 
-d.h. $\tilde{u} = \pi (\tilde{v},\tilde{w})$\\
+Die Rückrichtung folgt direkt aus den Beispielen 2 und 4. Für die Hinrichtung fixieren wir ein $\tilde{u} \in M $ und wählen $\varphi : \tilde{V} \in \mathbb{R}^d
+\rightarrow \tilde{U} \subset \mathbb{R}^n $ als zugehörige Parametrisierung von $\tilde{u} = \varphi (\tilde{x})$. Wir schreiben nun $\varphi$ als 
+\begin{equation*}
+\varphi(x)=\begin{pmatrix}\varphi_I(x) \in\mathbb{R}^d \\ \varphi_{II}(x) \ \in\mathbb{R}^{n-d} \end{pmatrix}
+\end{equation*}
+
+Da $\varphi'$ regulär sein muss, folgt (mit eventueller Vertauschung $\pi$ der Zeilen), dass auch $\varphi_I'(\tilde{x})\in\mathbb{R}^{d\times d}$ regulär ist. Zerlegen wir nun $\tilde{u}=\pi(\tilde{u},\tilde{w})$ mit $v\in\mathbb{R}^d$,
+
 \begin{center}
 \includegraphics[scale=0.5]{pictures/MA2_0010}\\
 \end{center}
-$\xRightarrow{\text{Theorem über inverse Fkt.}} \exists V \subset \tilde{V} $ offen,
-$\tilde{x} \in V, W \subset \mathbb{R}^d $ offen, $\tilde{v} \in W $
-mit $\varphi_I ^{-1} : W \rightarrow V $ Homöomorphismus und $C^q$-Abbildung,
-$\varphi_I ^{-1} (\tilde{v}) = \tilde{x} $ \\
-mit $f(v) \coloneqq \varphi_{II} \left(\varphi_I ^{-1} (v)\right) \forall v \in W $ ist 
-$f \in C^q \left(W, \mathbb{R}^{n-d}\right) $ \\
-und $\psi (v) \coloneqq \varphi \left(\varphi_I ^{-1} (v) \right) =
-\left( \varphi_I \left(\varphi_I ^{-1} (v) \right( ,
-\varphi_{II} \left(\varphi_I ^ {-1} (v) \right) \right) = \pi \left(v, f(v)\right) $ \\
-$\Rightarrow \psi (\tilde{v}) = \pi (\tilde{v}, \tilde{w}) = \tilde{u},
-\psi (w) = \varphi (v) \in M \\
-\varphi : \tilde{V} \rightarrow \tilde{U} $ ist Homöomorphismus \\
-$\Rightarrow \varphi (v) $ ist offen in $M$ \\
-$ \Rightarrow U \coloneqq \psi (W) $ ist offen bezüglich $M$
-$\Rightarrow U $ ist Umgebung von $\tilde{u} $ bezüglich $M$ \\
-$\xRightarrow{\tilde{u} \text{ beliebig}} $ Behauptung. 
 
+so folgt aus dem \emph{Satz über inverse Funktionen}, dass es ein offenes $V\subset\tilde{V}$ gibt, in dem ein $\tilde{x}\in V$ liegt und wiederum ein $W\subset\mathbb{R}^d$, in dem ein $\tilde{v}\in W$ liegt, so dass $\tilde{v}$ durch $\varphi^{-1}$ auf $\tilde{x}$ abgebildet wird. $\varphi^{-1}$ exisitert auf jeden Fall, da $\varphi$ homöomorph und $C^q$-differenzierbar ist. Es ist also
+
+\begin{equation*}
+\varphi_I^{-1}(\tilde{v})=\tilde{x}
+\end{equation*}
+
+Wählen wir nun 
+
+\begin{equation*}
+f(v) \coloneqq \varphi_{II} \left(\varphi_I ^{-1} (v)\right)
+\end{equation*}
+\linebreak
+welches für alle $v \in W $ $q$-mal stetig differenzierbar ist, also in $C^q \left(W, \mathbb{R}^{n-d}\right) $ liegt, und setzen 
+
+\begin{equation*}
+\psi (v) \coloneqq \varphi \left(\varphi_I ^{-1} (v) \right) =
+\left( \varphi_I \left(\varphi_I ^{-1} (v),\right( 
+\varphi_{II} \left(\varphi_I ^ {-1} (v) \right) \right) = \pi \left(v, f(v)\right)
+\end{equation*}
+\linebreak
+So folgt unmittelbar, dass $\psi (\tilde{v}) = \pi (\tilde{v}, \tilde{w}) = \tilde{u}$ ist und $\psi (w) = \varphi (v)$ in $M$ liegt. Aufgrund der Homöomorphie von $\varphi : \tilde{V} \rightarrow \tilde{U} $ ist $\varphi[V]$ offen in $M$ und somit auch $U\coloneqq\psi(W)$ offen bezüglich $M$. Da $U$ nun eine Umgebung von $\tilde{u}$ bezüglich $M$ ist und $\tilde{u}$ beliebig war, folgt direkt die Behauptung.
 \end{proof}
 
-\begin{satz}[Charakterisierung von Mf mit umgebendem Raum]
+\begin{satz}[Charakterisierung von Mannigfaltigkeiten mit umgebendem Raum]
 \mbox{} \\
-$M \subset \mathbb{R}^n $ sei d-dimensionale $C^q$-Mannigfaltigkeit. \\
-$\Longleftrightarrow \forall u \in M $ existiert eine Umgebung $\tilde{U}$ von $u$ 
-bezüglich $\mathbb{R}^n$, \\
-$\tilde{V} \subset \mathbb{R}^n $, 
-$\tilde{\psi}: \tilde{U} \rightarrow \tilde{V} $ wobei $\tilde{\psi} $ 
-ein $C^q$-Diffeomorphismus ist und 
+$M \subset \mathbb{R}^{n}$ ist genau dann eine d-dimensionale $C^{q}$-Mannigfaltigkeit, wenn für alle $u\in M$ eine Umgebung $\tilde{U}$ bezüglich des $\mathbb{R}^n$ exisitert, sodass $\psi:\tilde{U}\rightarrow\tilde{V}$ (mit $V\subset\mathbb{R}^n$ offen) ein $C^q$-Diffeomorphismus ist und
     \begin{equation*}
-    \tilde{\psi} \left( \tilde{U} \cap M \right) =
+    \psi \left( \tilde{U} \cap M \right) =
     \tilde{V} \cap \left( \mathbb{R}^d \times {0} \right) 
     \end{equation*}
+erfüllt.
 \begin{center}
 \includegraphics[scale=0.5]{pictures/MA2_0011}\\
 \end{center}
 \end{satz}
 
-\textbf{Bemerkung:} Diese Charakterisierung von Mannigfaltigkeiten benutzt den umgebenden Raum und wird häufig als Definition der Mannigfaltigkeit benutzt.    
+Dies ist eine Charakterisierung, die den umgebenden Raum nutzt und oft auch als Definition von $C^q$-Mannigfaltigkeiten verwendet wird.
     
 \begin{proof}
-$"\Leftarrow"$: $\psi $ eingeschränkt auf $\tilde{U} \cap M $ liefert Karten 
-$\Rightarrow$ Behauptung. \\
-$"\Rightarrow"$: fixiere $\tilde{u} \in M $, wähle $\tilde{U} \subset M $,
-$W \subset \mathbb{R}^d $, $f \in C^q \left( W, \mathbb{R}^{n-d} \right)$ \\
-gemäß Satz 29.1 oBdA $\pi = $ \textit{id} \\
-zerlege $u = (v,w) \in \mathbb{R}^d \times \mathbb{R}^{n-d}$, 
-$\tilde{u} = \left( \tilde{v}, f \left( \tilde{v} \right) \right) $ \\
-sei $\hat{U} \coloneqq W \times \mathbb{R}^{n-d} \eqqcolon \hat{V} $,
-liefert "Zylinder" aus $U$ und $W$ in Beweis zu Satz 29.1 \\
-sei $\tilde{\varphi}: \hat{V} \rightarrow \hat{U} $ mit
-$\tilde{\varphi} (v,w) \coloneqq (v, f(v) + w) \Rightarrow \tilde{\varphi} \in C^q $ \\
-$\tilde{\varphi}' \left( \tilde{v}, 0 \right) =
+Für die Rückrichtung schränken wir $\psi $ auf $\tilde{U} \cap M $ und erhalten sofort Karten, was die Behauptung bestätigt. Für die Hinrichtung fixieren wir ein $\tilde{u} \in M $ und wählen wieder $\tilde{U} \subset M $, $W \subset \mathbb{R}^d $ und ein $f \in C^q \left( W, \mathbb{R}^{n-d} \right)$. Gemäß Satz 29.1 setzen wir o.B.d.A $\pi = $ \textit{id} und zerlegen $\tilde{u} = \left( \tilde{v}, f \left( \tilde{v} \right) \right) \in \mathbb{R}^d \times \mathbb{R}^{n-d}$. Nun sei $\hat{U} \coloneqq W \times \mathbb{R}^{n-d} \eqqcolon \hat{V} $, welches den \emph{Zylinder} aus $U$ und $W$ in Beweis zu Satz 29.1 liefert.
+Setzen wir schließlich noch $\tilde{\varphi}: \hat{V} \rightarrow \hat{U} $ mit
+\begin{equation*}
+\tilde{\varphi} (v,w) \coloneqq (v, f(v) + w)
+\end{equation*}
+welches offenbar $\in C^q$ ist und erhalten, dass
+\begin{equation*}
+\tilde{\varphi}' \left( \tilde{v}, 0 \right) =
     \begin{pmatrix}
     \textit{id}_d & 0 \\
     f'(v)         & \textit{id}_{n-d}
     \end{pmatrix}
-$ ist regulär \\
-$\xRightarrow{\text{Satz ü. inverse Fkt.}} \exists $ 
-Umgebung $ \tilde{U} \subset \hat{U}$ von $\tilde{U}$,
-Umgebung $ \tilde{V} \subset \hat{V} $ von $ \left( \tilde{v}, 0 \right) $, sodass \\
-$\tilde{\psi} \coloneqq \tilde{\varphi}^{-1} \in C^q \left( \tilde{U}, \tilde{V} \right) $
-exisitiert. \\
-wegen $\tilde{\varphi} \left( \tilde{V} \cap \left( \mathbb{R}^d \times {0} \right) \right)
+\end{equation*}
+regulär ist. Nach dem \emph{Satz ü. inverse Funktionen} exisitert wiederum eine Umgebung $ \tilde{U} \subset \hat{U}$ von $\tilde{u}$ und eine Umgebung $ \tilde{V} \subset \hat{V} $ von $ \left( \tilde{v}, 0 \right) $, sodass $\tilde{\psi} \coloneqq \tilde{\varphi}^{-1} \in C^q \left( \tilde{U}, \tilde{V} \right) $
+exisitiert. Wegen $\tilde{\varphi} \left( \tilde{V} \cap \left( \mathbb{R}^d \times {0} \right) \right)
 = \tilde{U} \cap M $ folgt die Behauptung.
 \end{proof}
 
 \begin{folgerung}
-Sei $M \subset \mathbb{R}^n$ d-dimensionale $C^q$-Mannigfaltigkeit \\
-und $\varphi: V \subset \mathbb{R}^d \rightarrow U \subset M $ Parameter um $u \in M $ \\
-$\Longrightarrow \exists \tilde{U}, \tilde{V} \subset \mathbb{R}^n $ offen und 
-$\tilde{\varphi} : \tilde{V} \rightarrow \tilde{U} $ 
-mit $ U \subset \tilde{U}, V \times {0} \subset \tilde{V} $, \\
-$\tilde{\varphi} $ ist $C^q$-Diffeomorphismus und
-$\tilde{\varphi} (x, 0) = \varphi (x) \forall x \in V $
+Sei $M \subset \mathbb{R}^n$ eine d-dimensionale $C^q$-Mannigfaltigkeit und $\varphi: V \subset \mathbb{R}^d \rightarrow U \subset M $ die Parametrisierung um $u \in M $. Dann gibt es die offenen Mengen $\tilde{U}, \tilde{V} \subset \mathbb{R}^n $ mit $ U \subset \tilde{U}, V \times {0} \subset \tilde{V} $ für die $\tilde{\varphi} : \tilde{V} \rightarrow \tilde{U} $ abbildet, ein $C^q$-Diffeomorphismus ist und $\tilde{\varphi} (x, 0) = \varphi (x) \forall x \in V $
 \end{folgerung}
 
 \begin{proof}
 Folgt aus Beweisen von Satz 29.1 und 29.2
 \end{proof}
 
-\begin{theorem}[lokale Darstellung von Mf als Niveaumenge]
+\begin{satz}[lokale Darstellung von Mf als Niveaumenge]
 \mbox{} \\
 $M \subset \mathbb{R}^n $ sei d-dimensionale $C^q$-Mannigfaltigkeit. \\
 $\Longleftrightarrow \forall u \in M $ existiert eine Umgebing $\tilde{U}$ von $u$
@@ -116,7 +97,7 @@ bezüglich $\mathbb{R}^n$ und \\
 $f \in C^q \left( \tilde{U}, \mathbb{R}^{n-d} \right)$ 
 mit $\textit{rang } f' (u) = n-d $ und \\
 $\tilde{U} \cap M = \left\lbrace \tilde{u} \in \tilde{U} | f (\tilde{u}) = 0 \right\rbrace $
-\end{theorem}
+\end{satz}
 
 \textbf{somit:} $M$ ist eine $C^q$-Mannigfaltigkeit genau dann, 
 wenn $M$ die lokale Niveaumenge einer $C^q$-Funktion $f$ ist. \\
@@ -192,15 +173,15 @@ $\Rightarrow g \coloneqq \varphi^{-1} \circ \gamma $ ist $C^1$-Kurve,
 $g: (-\delta, \delta) \rightarrow \mathbb{R}^d $ mit $ g(0) = x $ und
     \begin{equation*}
     \gamma' (0) = \varphi' (x) g'(0) \text{, } \varphi' (x) \text{ist regulär.}
-    \tag{$\spadesuit$}
+    \tag{$\ast$}
     \end{equation*}
 Offenb. liefert auch jede $C^1$-Kurve $g$ in $\mathbb{R}^d $ durch $x$
-eine $C^1$-Kurve $\gamma$ in $M$ mit $(\spadesuit)$ \\
+eine $C^1$-Kurve $\gamma$ in $M$ mit $(\ast)$ \\
 Die Menge aller Tangentialvektoren $g'(0)$ von $C^1$-Kurven $g$ in $\mathbb{R}^d $
 ist offenbar $\mathbb{R}^d $ \\
 $\Rightarrow $ 
 29.4 $ \xRightarrow{\varphi' (x) \text{ ist regulär}} \textit{dim } T_uM = d $ \\
-da $(\spadesuit)$ für jeden Parameter $\varphi$ gilt, ist $T_uM$ unabhängig von $\varphi$.
+da $(\ast)$ für jeden Parameter $\varphi$ gilt, ist $T_uM$ unabhängig von $\varphi$.
 \end{proof}
 
 \textbf{Bemerkung:}
