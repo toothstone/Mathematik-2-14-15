@@ -132,5 +132,65 @@ folgende Eigenschaften haben:
     \end{pmatrix}
     $mit $\langle a_i, a_j \rangle $ \\
     und argumentiere wie bei den Eigenschaften der Determinante.
+\end{proof}
+
+\begin{beispiel}
+    $d = n-1 $: Sei $a_1, \ldots, a_{n-a} \in \mathbb{R}^n, 
+    a \coloneqq a_1 \wedge \ldots \wedge a_{n-1} $
+    \begin{equation}
+        \Rightarrow v_{n-1} (a_1, \ldots, a_{n-1}) = |a|_2
+    \end{equation}
+    Das heißt die euklidische Länge des äußeren Produkts liefert das Volumen.\\
+    Denn: $
+    \begin{pmatrix}
+        a^T \\
+        \rule[.5ex]{1em}{1pt}\\
+        A^T
+    \end{pmatrix}
+    \bullet
+    \begin{pmatrix}
+        a & | & A 
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+        \langle a,a \rangle & 0 \\
+        0 & A^T A
+    \end{pmatrix}
+    $ wegen $\langle a_i, a_j \rangle = 0 \forall j $, $A$ wie in (1)\\
+    $\Rightarrow |a|_2^2 \det A^T A = (\det (a|A))^2 \stackrel{(29.4)}{=}
+    |a|_2^4 \xRightarrow{\text{(1)}} $ (2)
+\end{beispiel}
+
+\textbf{Frage:} Existiert für eine Mannigfaltigkeit $M$ eine Transforamtion, so dass das
+Volumen eines Quaders $Q \in \mathbb{R}^d $ auf das eines Parallelotops 
+$P \subset T_uM \in \mathbb{R}^n $ abgebildet wird: \\
+$v_d(\text{Quader }Q) \xrightarrow{\varphi'(x)} v_d(\text{Parallelotop } P) $ ?\\
+\textbf{Skizzen fehlen}\\
+Für einen Quader $Q = P(b_1, \ldots, b_d) \subset \mathbb{R}^d $ ist 
+$P(a_1, \ldots, a_d) \subset T_uM \in \mathbb{R}^n $ das zugehörige Parallelotop, falls
+$a_j = \varphi'(x) b_j $,für $ j=1, \ldots, d $
+
+\begin{satz}
+    Sei $M$ eine d-dimensionale Mannigfaltigkeit,\\
+    $\varphi$ eine Parametrisierung um $\varphi(x) = u \in M $
+    und sei \\
+    $Q \coloneqq P(b_1, \ldots, b_d) \subset \mathbb{R}^d $ ein Quader 
+    $(b_j \in \mathbb{R}^d), \\
+    a_j \coloneqq \varphi'(x) b_j,\ j= 1, \ldots, d $ \\
+    \begin{equation}
+        \Longrightarrow 
+        v_d(a_1, \ldots, a_d) = 
+        \sqrt{\det \varphi'(x)^T \varphi'(x)}\ v_d(b_1, \ldots, b_d)
+    \end{equation}
+\end{satz}
+
+\begin{definition}
+    $\varphi'(x)^T \varphi'(x) \in \mathbb{R}^{d \times d} $
+    heißt \textbf{Maßtensor}    von $\varphi$ in $x$ und\\
+    $g^\varphi (x) \coloneqq \det \varphi'(x)^T \varphi'(x) $
+    heißt \textbf{Gramsche Determinante} von $\varphi$ in $x$.
+\end{definition}
+
+\begin{proof}
     
 \end{proof}
