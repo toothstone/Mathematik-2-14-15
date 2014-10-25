@@ -1,0 +1,136 @@
+\begin{definition}
+    Seien $a_1, \ldots, a_d \in \mathbb{R}^n (d \leq n)$ \\
+    Dann heißt die Menge
+    $P \left( a_1, \ldots, a_d \right) \coloneqq 
+    \left\lbrace 
+    \sum\limits_{j=1}^n t_j a_j | t_j \in [0,1], j = 1, \ldots, d    
+    \right\rbrace$ \\
+    das von $a_1, \ldots, a_d $ augespannte \textbf{Parallelotop} (auch d-Spat genannt).
+\end{definition}
+
+\textbf{Einschub:} Eine allgemeine Theorie für d-dimensionale Inhalte liefert das
+Hausdorff-Maß $\mathcal{H}^d$, dieses ist jedoch sehr viel abstrakter und schwierig 
+'auszurechnen'. Mithilfe von Mannigfaltgkeiten kommt man schneller zu Ergebnissen. \\
+Weiterhin ist uns bereits das Maß über die delta-Funktion/Distribution bekannt, welches
+zur Beschreibung von Punktmassen und -ladungen wichtig ist.
+
+\begin{satz}
+    \mbox{}
+    Seien $a_1, \ldots, a_n \in \mathbb{R}^n$, \\
+    das aufgespannte Volumen 
+    $v(a_1, \ldots , a_n) \coloneqq \mathcal{L}^n (P (a_1, \ldots, a_n))$ \\
+    so gilt:
+    \begin{enumerate}
+        \item[i)]
+            $v(a_1, \ldots, \lambda a_k, \ldots, a_n) = 
+            |\lambda| v(a_1, \ldots, a_n) \forall \lambda \in \mathbb{R}^n $
+        \item[ii)]
+            $v(a_1, \ldots, a_k + a_j, \ldots, a_n) = v(a_1, \ldots, a_n) $
+            falls $k \neq j $ \\
+            Dies ist bekannt als \textit{Prinzip des Cavaleri}, als Veranschaulichung kann
+            ein Stapel Spielkarten dienen: Egal wie man eine Seitenfläche von einem Rechteck
+            in ein Parallelogramm (oder umgekehrt) verschiebt, 
+            das Volumen des Stapels bleibt gleich. \\
+            \textbf{Skizze fehlt}
+        \item[iii)]
+            $v(a_1, \ldots, a_n) = 1 $ falls $a_1, \ldots, a_n $ ein Orthonormalsystem
+            in $\mathbb{R}^n $ bilden. \\
+            (Der Parallelotop ist dann der Einheitswürfel.)
+        \item[iv)]
+            $v(a_1, \ldots, a_n) = |\det A|$ für $A \coloneqq (a_1 | \ldots | a_n) $ \\
+            Das heißt die Determinante der Matrix mit den Spaltenvektoren $a_1, \ldots, a_n$
+            liefert das Volumen des aufgespannten Parallelotops. (Vgl. lin. Algbebra)
+    \end{enumerate}
+\end{satz}
+
+    \textbf{Beachte:} Die Eigenschaften i) - iii) implizieren bereits iv), die Argumentation
+    dazu verläuft wie zu den aus LAG bekannten Eigenschaften der Determinante, vgl.
+    auch die axiomatische Definition der Determinante.
+
+\begin{proof}
+    \mbox{}
+    \begin{enumerate}
+        \item[a)] 
+            Angenommen, $a_1, \ldots, a_n$ sind linear abhängig. \\
+            Dann ist das aufgespannte Parallelotop 'flach', da es in mindestens 
+            einer Dimension an Ausdehnung fehlt.
+            $\Rightarrow v(a_1, \ldots, a_n) = 0 $ \\
+            $\Rightarrow $ iv) ist korrekt 
+            (da die Determinante einer singulären Matrix Null ist) \\
+            $\Rightarrow $ i) und ii) sind korrekt
+        \item[b)]
+            Angenommen, $a_1, \ldots, a_n$ sind linear unabhängig. \\
+            Sei $\lbrace e_1, \ldots, e_n \rbrace$ die Standard-Orthonormalbasis in
+            $\mathbb{R}^n $, dafür gilt iii) nach der Definition des Lebesgue-Maß
+            (Es ist ein Quader mit allen Seitenlängen gleich Eins). \\
+            Weiter seien nun $U \coloneqq P(e_1, \ldots, e_n),
+            V \coloneqq P(a_1, \ldots, a_n) $ \\
+            $\Rightarrow A: \mathrm{int}\ U \rightarrow \mathrm{int}\ V $
+            ist ein Diffeomorphismus (A ist regulär, ist damit differenzierbar und
+            besitzt ein differenzierbares Inverses). \\
+            Offenbar ist $A'(y) = A \forall y $ \\
+            $\xRightarrow{\text{Trafosatz, Kap. 24}}
+            \mathcal{L}^n (V) = \int\limits_V \mathrm{d}x \stackrel{y = Ax}{=}
+            \int\limits_U |\det A| \mathrm{d}y = |\det A| \underbrace{\mathcal{L}^n (U)}_1
+            = |\det A|
+            \Rightarrow $ iv) $\Rightarrow $ i), ii), iii) folgen als Eigenschaften
+            der Determinanten
+    \end{enumerate}
+\end{proof}
+
+\textbf{Ziel:} Bestimmung des d-dimensionalen Inhalts 
+$v_d (P(a_1, \ldots, a_d))$ in $\mathbb{R}^n $
+\textbf{Idee:} Betrachte $P(a_1, \ldots, a_n)$ als Teilmenge eines d-dimensionalen
+Vektorraums $X$ und nimm das d-dimensional Lebesgue-Maß in $X$.\\
+Somit sollte $v_d: 
+\underbrace{\mathbb{R}^n \times \ldots \times \mathbb{R}^n }_{\text{d-mal}}
+\rightarrow \mathbb{R}_{\geq 0} $
+folgende Eigenschaften haben:
+\begin{enumerate}
+    \item[(v1)]
+        $v_d (a_1, \ldots, \lambda a_k, \ldots, a_d) = |\lambda| v_d(a_1, \ldots, a_d)
+        \forall \lambda \in \mathbb{R} $
+    \item[(v2)]
+        $v_d (a_1, \ldots, a_k + a_j, \ldots, a_d) = v_d(a_1, \ldots, a_d) $
+        falls $k \neq j$ (Prinzip des Cavaleri)
+    \item[(v3)]
+        $v_d(a_1, \ldots, a_d) = 1 $ falls $\lbrace a_1, \ldots, a_d \rbrace $
+        orthonormal zueinander sind.
+\end{enumerate}
+
+\begin{satz}
+    $v_d$ ist durch (v1), (v2), (v3) eindeutig bestimmt, und es gilt:
+    \begin{equation}
+        v_d(a_1, \ldots, a_d) = 
+        \sqrt[]{\det \underbrace{A^T A}_{\in \mathbb{R}^{d \times d}}}
+        \text{ mit } 
+        A \coloneqq\underbrace{(a_1 | \ldots | a_d)}_{\in \mathbb{R}^{n \times d}}
+    \end{equation}
+\end{satz}
+
+\textbf{Bemerkung:}
+\mbox{}
+\begin{enumerate}
+    \item
+        für $d=n $ liefert (30.1) Gleichung iv) in Satz 1
+    \item
+        $A^T A $ ist stets symmetrisch und positiv definit
+        $\left( \left\langle x, A^T Ax \right\rangle =
+        \langle Ax, Ax \rangle = \|Ax\|^2 \geq 0 \right)$
+        und somit ist auch stets $\det A^T A \geq 0 $
+    \item
+        $v_d (a_1, \ldots, a_d) = 0 \Leftrightarrow a_1, \ldots, a_d$ linear abhängig
+\end{enumerate}
+
+\begin{proof}
+    Selbststudium, verwende:\\
+    $A^T A = 
+    \begin{pmatrix}
+        \alpha_{11} & \ldots & \alpha_{1n} \\
+        \vdots      & \ddots & \vdots \\
+        \alpha_{n1} & \ldots & \alpha_{nn}
+    \end{pmatrix}
+    $mit $\langle a_i, a_j \rangle $ \\
+    und argumentiere wie bei den Eigenschaften der Determinante.
+    
+\end{proof}
