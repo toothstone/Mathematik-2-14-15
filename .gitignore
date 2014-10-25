@@ -3,4 +3,7 @@
 *.log
 *.gz
 *.toc
+*.bak
 build/
+build/*
+
