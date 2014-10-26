@@ -6,6 +6,7 @@
   
 \usepackage[ngerman]{babel}	    
 \usepackage[utf8]{inputenc}
+\usepackage[titles]{tocloft}
 \usepackage{amsmath}
 \usepackage{mathtools}
 \usepackage{amsthm}	 
@@ -25,10 +26,15 @@
 \pagestyle{headings}
 \setlength\parindent{0pt}
 \numberwithin{equation}{section}
-\renewcommand{\thechapter}{\Roman{chapter}} 
-\renewcommand*\thesection{\arabic{section}}
+
 \renewcommand\theequation{\maybe{\arabic{chapter}}\arabic{section}.\arabic{equation}}
 \DeclareRobustCommand\maybe[1]{\ifnum#1=\value{chapter}\relax\else\uppercase\expandafter{\romannumeral#1}.\fi}
+
+\renewcommand*\cftchapnumwidth{0.9cm}
+\renewcommand{\thechapter}{\Roman{chapter}} 
+
+\renewcommand*\cftsecnumwidth{0.7cm}
+\renewcommand*\thesection{\arabic{section}}
 
 \input{operators.tex}
 \input{environments.tex}
