@@ -21,6 +21,6 @@ PEP-8
 
 ==Contact==
 
-Reach us under
+Reach us via
 skripte@toothstone.de
 
