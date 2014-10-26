@@ -1,11 +1,11 @@
-\begin{definition}
+\begin{definition}[Parallelotop]
     Seien $a_1, \ldots, a_d \in \mathbb{R}^n (d \leq n)$ \\
     Dann heißt die Menge
     $P \left( a_1, \ldots, a_d \right) \coloneqq 
     \left\lbrace 
     \sum\limits_{j=1}^n t_j a_j | t_j \in [0,1], j = 1, \ldots, d    
     \right\rbrace$ \\
-    das von $a_1, \ldots, a_d $ augespannte \textbf{Parallelotop} (auch d-Spat genannt).
+    das von $a_1, \ldots, a_d $ aufgespannte \textbf{Parallelotop} (auch d-Spat genannt).
 \end{definition}
 
 \textbf{Einschub:} Eine allgemeine Theorie für d-dimensionale Inhalte liefert das
@@ -156,7 +156,7 @@ folgende Eigenschaften haben:
         \langle a,a \rangle & 0 \\
         0 & A^T A
     \end{pmatrix}
-    $ wegen $\langle a_i, a_j \rangle = 0 \forall j $, $A$ wie in (1)\\
+    $ wegen $\langle a_i, a_j \rangle = 0 \forall j $; $A$ wie in (1)\\
     $\Rightarrow |a|_2^2 \det A^T A = (\det (a|A))^2 \stackrel{(29.4)}{=}
     |a|_2^4 \xRightarrow{\text{(1)}} $ (2)
 \end{beispiel}
@@ -175,8 +175,8 @@ $a_j = \varphi'(x) b_j $,für $ j=1, \ldots, d $
     $\varphi$ eine Parametrisierung um $\varphi(x) = u \in M $
     und sei \\
     $Q \coloneqq P(b_1, \ldots, b_d) \subset \mathbb{R}^d $ ein Quader 
-    $(b_j \in \mathbb{R}^d), \\
-    a_j \coloneqq \varphi'(x) b_j,\ j= 1, \ldots, d $ \\
+    $(b_j \in \mathbb{R}^d),
+    a_j \coloneqq \varphi'(x) b_j,\ j= 1, \ldots, d $
     \begin{equation}
         \Longrightarrow 
         v_d(a_1, \ldots, a_d) = 
@@ -184,13 +184,99 @@ $a_j = \varphi'(x) b_j $,für $ j=1, \ldots, d $
     \end{equation}
 \end{satz}
 
-\begin{definition}
+\begin{definition}[Maßtensor und Gramsche Determinante]
+    \mbox{} \\
     $\varphi'(x)^T \varphi'(x) \in \mathbb{R}^{d \times d} $
-    heißt \textbf{Maßtensor}    von $\varphi$ in $x$ und\\
+    heißt \textbf{Maßtensor} von $\varphi$ in $x$ und\\
     $g^\varphi (x) \coloneqq \det \varphi'(x)^T \varphi'(x) $
     heißt \textbf{Gramsche Determinante} von $\varphi$ in $x$.
 \end{definition}
 
 \begin{proof}
-    
+    Sei $B = (b_1, \ldots, b_d) \in \mathbb{R}^{d \times d},\ 
+    A = (a_1, \ldots, a_d) \in \mathbb{R}^{n \times d} \\
+    \xRightarrow{\text{(1)}} v_d(a_1, \ldots, a_d) 
+    = \sqrt{\det A^T A} = \sqrt{\det ((\varphi'(x) B)^T \varphi'(x) B)}
+    = \sqrt{\det \varphi'(x)^T \varphi'(x)} 
+    \underbrace{\sqrt{\det B^T B}}_{= v_d(b_1, \ldots, b_d)}
+    $
+\end{proof}
+
+Sei $M \subset \mathbb{R}^n $ eine d-dimensionale Mannigfaltigkeit,
+$\varphi: V \rightarrow U $ eine lokale Parametriesierung,
+$f: \rightarrow \mathbb{R} $ eine Funktion auf dem Kartengebiet $U$.\\
+Motiviert durch die Riemann-Summen (Kap. 22)\\
+$\sum f(u_i) v_d(P_i) = \sum f(\varphi(x_i)) \sqrt{g^\varphi (x_i)} v_d(Q_i) $
+mit $P_i = \varphi'(x_i) Q_i $
+definieren wir:
+
+\begin{definition}[Integral über über Kartengebiet]
+    \begin{equation}
+        \int\limits_U f \mathrm{d}a 
+        \coloneqq \int\limits_V f(\varphi(x)) \sqrt{g^\varphi (x)} \mathrm{d}x
+    \end{equation}
+    als \textbf{Integral von $f$} über das Kartengebiet $U$ falls die rechte
+    Seite existiert.\\
+    $f$ heißt dann \textbf{integrierbar} auf $U$.
+\end{definition}
+
+\textbf{Bemerkung:}
+\begin{enumerate}
+    \item[-]
+        die rechte Seite in (30.4) ist ein Lebesgue-Integral in $\mathbb{R}$
+    \item[-]
+        damit die Definition von (30.4) sinnvoll ist, sollte die rechte Seite
+        unabhängig von $\varphi$ sein
+    \item[-]
+        mittels des Hausdorff-Maß $\mathcal{H}^d $ kann
+        $\int\limits_U f \mathrm{d}a $
+        völlig analog zum Lebesgue-Maß definiert werden
+        $\left(\int\limits_U f(u) \mathrm{d} \mathcal{H} (u) \right) $
+    \item[-]
+        für n-dimensionale Mannigfaltigkeiten $M \subset \mathbb{R}^n: \\
+        \int\limits_U f \mathrm{d}a = $ Lebesgue-Integral 
+        $\int\limits_U f \mathrm{d}x $ falls dieses existiert
+\end{enumerate}
+
+\begin{satz}
+    Sei $M \subset \mathbb{R}^n $ eine d-dimensionale Mannigfaltigkeit,\\
+    $U \subset M $ ein Kartengebiet, $f:U \rightarrow \mathbb{R} $ und
+    $\varphi_i: V_i \rightarrow U,\ i=1,2 $ seien zugehörige Parametrisierungen. \\
+    $\Longrightarrow \int\limits_{V_1} f(\varphi_1(x)) \sqrt{g^{\varphi_1} (x)} \mathrm{d}x
+    = \int\limits_{V_2} f(\varphi_2(x)) \sqrt{g^{\varphi_2} (x)} \mathrm{d}x
+    $ falls ein Integral exisitiert.
+\end{satz}
+
+\textbf{Somit:} (4) ist unabhängig von der Parametrisierung
+\begin{equation}
+    f(.) \text{ int'bar auf } U
+    \Longleftrightarrow f(\varphi(.)) \sqrt{g^\varphi (x)} 
+    \text{ int'bar auf } V
+    \text{ für eine Param. }
+    \varphi: V \rightarrow U
+\end{equation}
+
+\begin{proof}
+    $\psi \coloneqq \varphi_1^{-1} \bullet \varphi_2: V_2 \rightarrow V_1 $
+    ist ein Diffeomorphismus nach Lemma 5 \\
+    $\xRightarrow{\text{Trafosatz}} 
+    \int\limits_{V_1} f(\varphi_1(x)) \sqrt{g^{\varphi_1} (x)} \mathrm{d}x
+    \stackrel{x=\psi(y)}{=}
+    \int\limits_{V_2} f(\varphi_1(\psi(y)))
+    \underbrace{
+        \sqrt{\det \varphi_1'(\psi(y))^T \varphi_1'(\psi(y))}
+        \underbrace{
+            |\det \psi'(y)|
+            }_{
+            = \sqrt{\det \psi'(y)^T \psi'(y)}}
+        }_{
+        = \sqrt{\det \psi'^T \varphi_1'^T \psi' \varphi_1'}
+        = \sqrt{\det (\psi' \varphi_1')^T \psi' \varphi_1'}
+        }
+    \mathrm{d}y
+    $ wegen $
+    \varphi_2 (y) = \varphi_1 (\psi(y))
+    \xRightarrow{\text{Kettenregel}}
+    \varphi_2' (y) = \varphi_1' (\psi(y)) \psi'(y)
+    \Rightarrow $ Behauptung.
 \end{proof}
