@@ -15,7 +15,9 @@ f_1 \\ f_2
 M:=\{u\in\mathbb{R}^3 \ | \underbrace{\ f_1(u)=0, \ f_2(u)=0}_{\text{Schnitt \ zweier \ Flächen}}\}
 \end{equation*}
 eine 1-dimensionale Mannigfaltigkeit. Dann steht der Gradient $f'_i(u)^T$ senkrecht auf $\{f_i=0\}$. $f'_1(u)^T$ und $f'_2(u)^T$ sind also Normalen zu $M$ in $u$.\\
-\textbf{Grafik fehlt}\\
+\begin{center}
+	\includegraphics[scale=0.5]{pictures/003-01.png}
+\end{center}
 $v$ ist hier die Tangente, da $\scap{f'_i(u)^T}{v}=0$ ist (für $i=1,2$).
 \end{beispiel}
 
@@ -57,7 +59,9 @@ heißt dann \textbf{Einheitsnormalenfeld}, falls
 \begin{equation*}
 \nu(u)\in N_uM\ \mathrm{und\ } ||\nu(u)||=1 \ \ \forall u\in M
 \end{equation*}
-\textbf{Grafik fehlt.}
+\begin{center}
+	\includegraphics[scale=0.5]{pictures/003-02.png}
+\end{center}
 \end{definition}
 
 \begin{lemma}
@@ -161,17 +165,24 @@ als Einheitsnormalenfeld von $M$ wählen. Man beachte, dass $\varphi'(x)$ für a
 Wir kommen zum Abschluss dieses Kapitels. Wir haben uns mit Mannigfaltigkeiten und ihren Eigenschaften beschäftigt. Als nächstes möchten wir die Integration auf ihnen untersuchen, beschränken uns dabei jedoch noch auf Kartengebiete.
 
 \section{Integration auf Kartengebieten}
-\setcounter{equation}{0}     %Quick fix for equation-counters not resetting with section
 Wir stellen uns zunächst die interessante Frage, wie man den Oberflächeninhalt beziehungsweise das d-dimensionale Äquivalent dazu von einer Mannigfaltigkeit bestimmen kann. 
-Die Idee wäre natürlich, wie etwa bei der Integration über $\mathbb{R}$, sie durch \emph{ebene} Mannigfaltigkeiten (etwa mit Dreiecken) stückweise zu approximieren.
+Die Idee wäre natürlich, wie etwa bei der Integration über $\mathbb{R}$, sie durch \emph{ebene} Mannigfaltigkeiten (etwa mit Dreiecken) stückweise zu approximieren.\\
+\begin{center}
+	\includegraphics[scale=0.5]{pictures/003-03.png}
+\end{center}
 \begin{equation*}
 \textbf{Fläche}(M)=\sup \sum\limits_\Delta \textbf{Dreiecksflächen}
 \end{equation*}
 Wir stellen jedoch mit großem Entsetzen schnell fest, dass diese Methode nur für Kurven ($d=1$) funktioniert.\\
-\linebreak
+\begin{center}
+	\includegraphics[scale=0.5]{pictures/003-04.png}
+\end{center}
 Schauen wir uns zum Beispiel eine Zylinderfläche $M\subset\mathbb{R}^3$ an. 
 Lassen wir die Feinheit $\sigma$ beliebig klein werden - heute ist ja schließlich alles nano! - so wachsen die Dreiecksflächen immer weiter, 
 bis die Fläche von $M$ über alle Grenzen hinaus wächst. Wir müssen uns also wohl sofort wieder von dieser Methode verabschieden.\\
+\begin{center}
+	\includegraphics[scale=0.5]{pictures/003-05.png}
+\end{center}
 \emph{Über dieses Dilemma nachlesen kann man übrigens in Hildebrand, Analysis 2 unter ''Schwartz'scher Stiefel''.}\\
 \linebreak
 Versuchen wir also etwas neues (für $d=2$) zu finden. Wir nehmen hierzu tangentionale Parallelogramme (äußere Approximation).
@@ -179,3 +190,6 @@ $\varphi'(x):\mathbb{R}^d\rightarrow\mathbb{R}^n$ ist linear. Die Methode gestal
 \begin{equation*}
 \textbf{Fläche}(M)=\lim\limits_{\sigma\rightarrow 0}\left(\sum\textbf{Fläche\ }\varphi'(x_j)(Q)\right)
 \end{equation*}
+\begin{center}
+	\includegraphics[scale=0.5]{pictures/003-06.png}
+\end{center}
