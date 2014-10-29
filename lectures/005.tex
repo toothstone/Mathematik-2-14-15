@@ -1,0 +1,287 @@
+Nehmen wir uns die Funktion $f\equiv 1$ her, 
+die offensichtlich integrierbar auf jedem Kartengebiet $U\subset M$ ist, 
+dann ist
+\begin{equation}
+	v_d(U)\coloneqq \int_U 1 \mathrm{d}a 
+	\ \ \left( =\int_V 1 \sqrt{g^\varphi(x)}\mathrm{d}x\right)
+\end{equation}
+der d-dimensionale Inhalt (Maß, Länge, Fläche, Volumen,...) von $U$ 
+wobei $\sqrt{g^\varphi(x)}$ das Flächenelement von $U$ bezüglich $\varphi$ ist.\\
+Mit dieser Definition entspricht $v_d(U)\equiv\mathcal{H}^d(U)$ direkt 
+mit dem d-dimensionalen Hausdorffmaß überein (siehe Literatur).\\
+Wir stellen außerdem nach (30.4) fest, dass $v_d(U)$ genau dann verschwindet, 
+wenn $U$ ein Nullmenge ist:
+\begin{equation*}
+	v_d(U)=0 \ \Leftrightarrow \ \mathcal{L}^d(\varphi^{-1}(U))=0
+\end{equation*}
+
+\begin{beispiel}
+Wir wollen $\int_Mf\mathrm{d}a$ auf einer Halbsphäre mit Radius $r$, 
+gegeben durch
+\begin{equation*}
+	M\coloneqq\left\{u=(u_1,u_2,u_3)\in\mathbb{R}^3\middle| ||u||=r, u_1>0\right\}
+\end{equation*}
+berechnen und parametrisieren $M$ dafür in Kugelkoordinaten durch
+\begin{equation*}
+	\varphi(x_1,x_2)=r\begin{pmatrix}
+	\cos x_1 \cos x_2 \\ \cos x_2 \sin x_1 \\ \sin x_2
+	\end{pmatrix}
+	\ \ \text{für\ } (x_1,x_2)\in V\coloneqq \left(-\frac{\pi}{2},\frac{\pi}{2}\right)^2
+\end{equation*}
+Offenbar ist $\varphi:V\rightarrow M$ stetig differenzierbar, regulär und homöomorph. 
+Es handelt sich also tatsächlich um eine echte Parametrisierung von $M$. 
+Das macht natürlich $M$ zu einer Mannigfaltigkeit und sogar zu einem Kartengebiet.
+Um das Volumen zu berechnen benötigen wir zunächst
+\begin{equation*}
+	\varphi'(x)=r\begin{pmatrix}
+	-\cos x_2 \sin x_1 & -\sin x_2 \cos x_1 \\
+	 \cos x_2 \cos x_1 & -\sin x_2 \sin x_1 \\
+	 0 & \cos x_2
+	\end{pmatrix}
+\end{equation*}
+um über 
+\begin{equation*}
+	\varphi'(x)^T\varphi'(x)=r^2\begin{pmatrix}
+	\cos^2 x_2 & 0 \\ 0 & 1 
+	\end{pmatrix}
+\end{equation*}
+das Flächenelement
+\begin{equation*}
+	\sqrt{g^\varphi(x)}=r^2\cos x_2
+\end{equation*}
+zu berechnen.\\
+Damit können wir das zu berechnende Integral folgendermaßen ausdrücken:
+\begin{equation*}
+	\int_Mf\mathrm{d}a = r^2\int_Vf(\varphi(x))\cos x_2\mathrm{d}x = 
+	r^2\int\limits_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\cos x_2\int\limits_{-\frac{\pi}{2}}^{\frac{\pi}{2}}f(\varphi(x)\mathrm{d}x_1\mathrm{d}x_2 
+\end{equation*}
+Wählen wir nun zum Beispiel $f(u)=u_1^2+u_2^2$, dann ist $f(\varphi(x)=r^2\cos^2 x_2$ und das Integral wird zu
+\begin{equation*}
+	\int_M(u_1^2+u_2^2)\mathrm{d}a=r^4\int\limits_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\cos x_2 \int\limits_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\mathrm{d}x_1\mathrm{d}x_2 =
+\end{equation*}
+\begin{equation*}
+	= \pi r^4 \int\limits_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \cos^3 x_2\mathrm{d}x_2 = \pi r^4 \left[\sin x_2-\frac{1}{3}\sin^3 x_2\right]_{-\frac{\pi}{2}}^{\frac{\pi}{2}} = 
+	2\pi r^4\left(1-\frac{1}{3}\right)=\frac{4}{3}\pi r^4
+\end{equation*}
+Ist nun $f(u)=1$, dann ist
+\begin{equation*}
+	v_d(M)=\pi r^2 \int_M\mathrm{d}a=\pi r^2 \int\limits_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \cos x_2 \mathrm{d}x_2 = 
+	\pi r^2 \left[\sin x_2\right]_{-\frac{\pi}{2}}^{\frac{\pi}{2}} = 2 \pi r^2
+\end{equation*}
+was genau genau der halben Sphärenfläche entspricht. 
+Es ist zu bemerken, dass wir in unserer Rechnung den Rand von $M$ komplett vernachlässigt haben. 
+Wir werden jedoch später zeigen, dass derartige Nullmengen keinen Beitrag leisten. 
+\end{beispiel}
+
+\begin{satz}[Integral über $(n-1)$-dimensionale Graphen]
+\ \\ Sei $g:V\subset\mathbb{R}^{n-1}\rightarrow\mathbb{R}$ mit $V$ offen eine stetig differenzierbare Funktion und 
+\begin{equation*}
+	\Gamma\coloneqq\left\{\left(x,g(x)\right)\in\mathbb{R}^n \middle| x\in V \right\}
+\end{equation*}
+der Graph von $g$. Dann gilt für $f:\Gamma\rightarrow\mathrm{R}$
+\begin{equation}
+\int_\Gamma f\mathrm{d}a=\int_Vf\left(x,g(x)\right)\sqrt{1+|g(x)|^2}\mathrm{d}x
+\end{equation}
+falls die rechte Seite existiert.
+\end{satz}
+
+\begin{proof}
+$\Gamma$ ist eine $(n-1)$-Mannigfaltigkeit (vgl. Bsp. 29.2) 
+und auch Kartengebiet bezüglich der Parametrisierung $\varphi:V\rightarrow\Gamma$ 
+mit $\varphi(x)=\left(x,g(x)\right)$. Wir setzen 
+\begin{equation*}
+	\gamma\coloneqq\sqrt{\det \varphi'(x)^T\varphi'(x)}
+\end{equation*}
+und sehen mit (30.1), dass
+\begin{equation*}
+	\gamma=v_{n-1}\left(\varphi_{x_1}(x)\middle|...\middle|\varphi_{x_{n-1}}(x)\right)
+\end{equation*}
+und dann wiederum mit (30.2)
+\begin{equation*}
+	\gamma=||\varphi_{x_1}(x)\wedge ... \wedge \varphi_{x_{n-1}}(x)||
+\end{equation*}
+Da aber auch
+\begin{equation*}
+	\varphi_{x_1}(x)\wedge ... \wedge \varphi_{x_{n-1}}(x)=(-1)^n\begin{pmatrix}
+	g'(x) \\ -1
+	\end{pmatrix}\in\mathbb{R}^n
+\end{equation*}
+gilt, können wir $\gamma$ auch als
+\begin{equation*}
+	\gamma=\sqrt{1+||g'(x)||^2}
+\end{equation*}
+schreiben. Damit erhalten wir
+\begin{equation*}
+	\int_\Gamma f\mathrm{d}a=\int f(\varphi(x))\sqrt{1+||g'(x)||^2}\mathrm{d}x
+\end{equation*}
+falls die rechte Seite existiert. Damit gilt für den Inhalt von $\Gamma$ (falls er existiert):
+\begin{equation}
+	v_{n-1}(\Gamma)=\int_V\sqrt{1+||g'(x)||^2}\mathrm{d}x
+\end{equation}
+\end{proof}
+
+\begin{beispiel}
+Betrachten wir die Halbsphäre
+\begin{equation*}
+	S_+^{n-1}\coloneqq\left\{ x\in\mathbb{R}^n \middle| |x|=1,\ x_n>0 \right\}
+\end{equation*}
+die offenbar für alle $x\in B_1(x)\subset\mathbb{R}^{n-1}$ der Graph von $g(x)=\sqrt{1-|x|^2}$ ist. 
+Mit (30.8) sehen wir sofort
+\begin{equation*}
+	v_{n-1}\left(S_+^{n-1}\right)=\int\limits_{B_1(0)\subset\mathbb{R}^{n-1}}\sqrt{1+\frac{|x|^2}{1-|x|^2}}\mathrm{d}x = \int\limits_{B_1(0)}\frac{1}{\sqrt{1+|x|^2}}\mathrm{d}x
+\end{equation*}
+Wir können an dieser Stelle ohne Beweis annehmen, dass $f$ rotationssymetrisch auf $B_1(0)\subset\mathbb{R}^{n-1}$ ist (d.h. $f(x)=f(|x|)\ $). Dann verwenden wir (aus Königsberger Analysis 2, Kap 8.2)
+\begin{equation}
+	\int\limits_{B_r(0)}f(x)\mathrm{d}x = 
+	n\kappa_n \int\limits_0^r\tilde{f}(\rho)\rho^{n-1}\mathrm{d}\rho
+	\ \ \ \ \ \text{für\ }B_r(0)\subset\mathbb{R}^n \ 	\text{und\ } \kappa_n\coloneqq\mathcal{L}^n \left(B_r(0)\right)
+\end{equation}
+und münzen dies auf $(n-1)$ um:
+\begin{equation*}
+	v_{n-1}\left(S_+^{n-1}\right) =
+	(n-1)\kappa_{n-1}\int\limits_0^1\frac{r^{n-2}}{\sqrt{1-r^2}}\mathrm{d}r = 
+	(n-1)\kappa_{n-1}\int\limits_0^1 r^n\frac{1}{r^2\sqrt{1-r^2}}\mathrm{d}r = 
+\end{equation*}	
+Dies integrieren wir partiell und erhalten
+\begin{equation*}
+	= n(n-1)\kappa_{n-1}\int\limits_0^1 r^{n-1}\frac{\sqrt{1-r^2}}{r}\mathrm{d}r=n\int\limits_{B_1(0)}\sqrt{1-|x|^2}\mathrm{d}r=\frac{n}{2}\kappa_n
+\end{equation*}	
+Was haben wir damit herausbekommen? Wir setzen
+\begin{equation*}
+	\omega\coloneqq\left(S^{n-1}\right)=2v_{n-1}\left(S_+^{n-1}\right)
+\end{equation*}
+als die Oberfläche der Sphäre $S^{n-1}\subset\mathbb{R}^n$ und sehen, dass für alle $n\in\mathbb{N}_{\geq 2}$
+\begin{equation}
+	\omega_n=n\kappa_n
+\end{equation}
+Das ist ein erstaunliches Resultat, welches wir uns an zwei Beispielen verdeutlichen wollen.\\
+\begin{center}
+$\begin{matrix}
+n=2: & \ \ \ \ \ \  & v_{n-1} & = & 2\pi & = & 2\cdot v_n & = & 2 \cdot \pi \\
+n=3: & \ \ \ \ \ \  & v_{n-1} & = & 4\pi & = & 3\cdot v_n & = & 3 \cdot \frac{4}{3}\pi
+\end{matrix}$
+\end{center}
+Wir können dieses Resultat sogar auf beliebige Kugeln skalieren:
+\begin{equation*}
+	v_n\left(B_r(0)\right)=\mathcal{L}^n\left(B_r(0)\right)=r^n\kappa_n
+\end{equation*}
+Mithilfe des Transformationssatzes können wir das ganze sogar noch umschreiben 
+und erhalten ein Beziehung die sich später in der Differentialgleichungstheorie 
+als maßgeblich herausstellen wird:
+\begin{equation*}
+	v_{n-1}\left(\partial B_r(0)\right)=r^{n-1}\omega_n=r^{n-1}n\kappa_n
+\end{equation*}
+\end{beispiel}
+
+\begin{beispiel}[Kurvenintegral]
+Wir betrachten die Kurve $\varphi:I\subset\mathbb{R}\rightarrow\mathbb{R}^n$, 
+wobei $I$ ein offenes Intervall ist, so dass
+\begin{equation*}
+	C\coloneqq\varphi(I)
+\end{equation*}
+eine 1-dimensionale Mannigfaltigkeit ist. Wir erinnern uns, dass $\varphi$ 
+genau dann regulär ist, wenn $\varphi'(t)\neq 0$ ist. Offenbar ist 
+\begin{equation*}
+	\det \varphi'(t)^T\varphi'(t)=|\varphi'(t)|^2
+\end{equation*}
+und so können wir, falls es existiert, für ein $f:C\rightarrow\mathbb{R}$ 
+mit $I=(a,b)$ formulieren
+\begin{equation}
+ \int_Cf\mathrm{d}a=\int\limits_a^bf(\varphi(t))|\varphi'(t)|\mathrm{d}t
+\end{equation}
+Dieses Integral nennen wir das Kurvenintegral von $f$ entlang des Weges $C$. 
+Auf diesem Wege können wir natürlich auch den 1-dimensionalen Inhalt, $C$ 
+, den wir \textbf{Bogenlänge} nennen, bestimmen, in dem wir einfach $f\equiv 1$ setzen.
+\begin{equation}
+	v_1(C)=\int\limits_a^b|\varphi'(t)|\mathrm{d}t
+\end{equation}
+Falls wir nun noch ein $\varphi$ finden, sodass $|\varphi'(t)|=1$ ist, 
+dann nennen wir dieses $\varphi$ \textbf{Bogenlängenparametrisierung} 
+von $C$, da uns in diesem Fall $t$ direkt die Bogenlänge liefet:
+\begin{equation*}
+	t_2-t_1=v_1(\varphi(t_2-t_1))
+\end{equation*}
+Wir können natürlich auch durch einen Kartenwechsel umparametrisieren 
+und erhalten so für 
+\begin{equation*}
+	\sigma(s)=\int\limits_a^s|\varphi'(t)|\mathrm{d}t 
+	\tag{$\ast$}
+\end{equation*}
+immer ein $\psi:(0,v_s(C))\rightarrow\mathbb{R}^n$ finden, 
+das mit $\psi(I)=\varphi(\sigma^{-1}(I))$ stets eine Bogenlängenparametrisierung 
+ist. Das können wir ganz leicht zeigen:\\
+Offenbar ist $\sigma$ stetig differenzierbar und sogar monoton wachsend, 
+weil $\varphi'$ regulär ist. Das bedeutet, dass ein $\sigma^{-1}$ 
+existiert, das ebenfalls stetig differenzierbar ist. 
+So können wir folgern
+\begin{equation*}
+	|\psi'(\tau)| = 
+	\left| \varphi' ( \sigma^{-1} (\tau)\cdot\sigma^{-1'} (\tau)\right|= 
+	\left| \varphi' ( \sigma^{-1}\right|\frac{1}{|\sigma'(\sigma^{-1}(\tau))|} 
+	\overset{(\ast)} = 1
+\end{equation*}
+Für jede Kurve existiert also \emph{genau eine} ausgezeichnete Parametrisierung, 
+nämlich die Bogenlängenparametrisierung.
+\end{beispiel}
+Wir wollen uns dem Thema der Kurvenlänge nun auf eine etwas andere Weise annähern.
+\begin{definition}[Rektifizierbarkeit]
+Für eine beliebige stetige Funktion $\varphi:[a,b]\rightarrow\mathbb{R}^n$ 
+heißt die zugehörige Kurve $C=\varphi([a,b])$ \textbf{rektifizierbar}, 
+falls 
+\begin{equation*}
+	l(C)\coloneqq\sup_Z\left\{\sum\limits_{j=1}^k |\varphi(t_j)-\varphi(t_{j-1})| \middle| \{t_0,...,t_k\}\in Z\right\} < \infty
+\end{equation*}
+wobei $Z$ die Menge alle geordneten Zerlegungen von $C$ ist. 
+Man kann $C$ also eine Länge zuordnen.
+\end{definition}
+
+\begin{satz}[Rektifizierbare Kurven]
+Sei $\varphi:[a,b]\rightarrow\mathbb{R}^n$ eine 
+stetig differenzierbare Funktion, dann ist 
+\begin{enumerate}
+	\item $\varphi$ rektifizierbar und
+	\item $C\coloneqq\varphi((a,b))$ eine 1-dimensionale Mannigfaltigkeit 
+	mit der zugehörigen Parametrisierung $\varphi$.
+\end{enumerate}
+Insbesondere gilt dann:
+\begin{equation*}
+	l(C)=v_1(C)=\mathcal{H}^1(C)
+\end{equation*}
+\end{satz}
+
+Das ist beruhigend. Wir möchten uns den gesamten Beweis ersparen, dann 
+er mit sehr viel Schreibarbeit verbunden ist. Deshalb hier nur eine 
+\emph{Beweisskizze}:\\
+$\varphi$ ist Lipschitz-stetig auf $[a,b]$, also 
+\begin{equation*}
+	l(\varphi[a,b])<L[a,b]
+\end{equation*}
+Damit ist $\varphi$ rektifizierbar und 1. gezeigt. Für 2. zeigen wir, dass
+\begin{equation*}
+	l(t)\coloneqq l(\varphi[a,t])<L[a,b] 
+\end{equation*}
+stetig differenzierbar auf $(a,b)$ mit $l'(t)=|\varphi'(t)|$ ist. 
+Daraus folgt dann 
+\begin{equation*}
+	l(b)=\int\limits_a^bl'(t)\mathrm{d}t = 
+	\int\limits_a^b|\varphi'(t)|\mathrm{d}t = 
+	v_1(C)
+\end{equation*}
+
+\begin{beispiel}[Umfang des Einheitskreises]
+\begin{equation*}
+	\varphi:\left(-\pi,\pi\right)\rightarrow\mathbb{R}^n 
+	\ \ \ \ \ \text{mit\ } \varphi(t)=\begin{pmatrix}
+	\cos t \\ \sin t
+	\end{pmatrix}
+\end{equation*}
+$C\coloneqq \varphi([-\pi,\pi])$ ist der Einheitskreis ohne den Punkt $(-1,0)^T$. 
+Dann ist 
+\begin{equation*}
+	v_1(C)=\int\limits_{-\pi}^{\pi}|\varphi'(t)|\mathrm{d}t=\int\limits_{-\pi}^{\pi}\left\|\begin{pmatrix}
+	-\sin x \\ \cos x
+	\end{pmatrix}\right\|\mathrm{d}t = 
+	\int\limits_{-\pi}^{\pi}1\mathrm{d}t=2\pi
+\end{equation*}
+Wichtig hierbei ist, dass $\pi$ die Bogenparametrisierung ist.
+\end{beispiel}
