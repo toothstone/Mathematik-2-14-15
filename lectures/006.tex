@@ -1,0 +1,294 @@
+Nachdem wir nun auf Kartengebieten integrieren können, 
+lassen sich natürlich eine Vielzahl von Eigenschaften untersuchen. 
+
+\begin{satz}
+	Seien $f,g,f_k:U\rightarrow\mathbb{R}$ Funktionen, 
+	die vom Kartengebiet $U$ der Mannigfaltigkeit $M\subset\mathbb{R}^n$ 
+	abbilden, dann gelten die folgenden Beziehungen:
+	\begin{enumerate}
+		\item 	$f$ ist einerseits genau dann auf $U$ integrierbar, 
+				wenn $|f|$ integrierbar auf $U$ ist und auch genau dann, 
+				wenn es $f^+$ und $f^-$ sind.
+		\item 	Sind $f$ und $g$ integrierbar auf $U$ und $c\in\mathbb{R}$, 
+				so ist
+				\begin{equation*}
+					\int_Ucf\pm g\mathrm{d}a = 
+					c\int_Uf\mathrm{d}a\pm\int_Ug\mathrm{d}a
+				\end{equation*}
+		\item 	Sind $f$ und $g$ integrierbar und $g$ beschränkt auf $U$, 
+				dann ist auch $f\circ g$ integrierbar auf $U$.
+		\item 	Sind $f$ und $g$ integrierbar und $f\leq g$ auf $U$, 
+				dann dies auch für die Integrale:
+				\begin{equation*}
+					\int_Uf\mathrm{d}a\leq\int_Ug\mathrm{d}a
+				\end{equation*}
+		\item	\textbf{Monotone Konvergenz:} Seien alle $f_k$ 
+				integrierbar und $f_1\leq f_2\leq ...$ auf $U$, 
+				außerdem sei die Folge der Integrale $\left(\int_Uf_k\mathrm{d}a\right)$ 
+				beschränkt sowie $f(u)=\lim\limits_{k\rightarrow\infty}f_k(u) \ \ \forall u\in U$, 
+				dann ist $f$ integrierbar auf $U$ mit
+				\begin{equation*}
+					\int_Uf\mathrm{d}a = 
+					\lim\limits_{k\rightarrow\infty}\int_Uf_k\mathrm{d}a
+				\end{equation*}
+		\item 	\textbf{Majorisierte Konvergenz:} Seien $g$ und alle $f_k$ 
+				integrierbar und weiterhin $f_k\leq g \ \ \forall k$ auf $U$. 
+				Außerdem möge $f(u) = \lim\limits_{k\rightarrow\infty}f_k(u) \ \ \forall u\in U$ 
+				sein. Dann ist $f$ integrierbar auf $U$ mit
+				\begin{equation*}
+					\int_Uf\mathrm{d}a = 
+					\lim\limits_{k\rightarrow\infty}\int_Uf_k\mathrm{d}a
+				\end{equation*}
+	\end{enumerate}
+\end{satz}
+\newpage
+\begin{proof}
+	Wir werden diesen Beweis sehr kurz halten, indem wir einige 
+	Äquivalenzen finden, aus denen unter Verwendung der Eigenschaften 
+	des Lebesque-Maßes die Behauptung folgen wird.\\
+	Wir setzen zunächst $\varphi:V\rightarrow U$ als die Parametrisierung 
+	des	Kartengebietes $U$. 
+	\begin{enumerate}
+		\item 	$f$ ist genau dann integrierbar, wenn es 
+				$f\left(\varphi(.)\right)\sqrt{g^\varphi(.)}$ ist. 
+				Dies folgt aus 	der Definition der Gramschen Determinante. 
+		\item 	$f\leq g$ ist äquivalent dazu, dass 
+				$f\left(\varphi(.)\right)\sqrt{g^\varphi(.)} \leq 
+				g\left(\varphi(.)\right)\sqrt{g^\varphi(.)}$ ist.
+	\end{enumerate}
+	Daraus folgen unter Verwendung der Eigenschaften des Lebesque-Maßes 
+	schließlich die Behauptungen. 
+\end{proof}
+
+\section{Integrale auf Mannigfaltigkeiten}
+
+Im letzten Kapitel haben wir uns dem Integrieren auf Kartengebieten 
+gewidmet. Das möchten wir natürlich nun auch auf ganzen Mannigfaltigkeiten 
+tun können. Da stellt sich jedoch die Frage, wie dieses Integral dann 
+genau aussehen soll. \\
+Wir könnten uns natürlich überlegen, die Mannigfaltigkeit einfach 
+mit Kartengebieten $U_\beta$, wobei $\beta$ hier eine vollkommen 
+beliebige Indexmenge sein kann, zu überdecken und die Integration 
+dann auf jedem Gebiet einzeln durchzuführen. An dieser Stelle stoßen 
+wir jedoch auf ein Problem. Kartengebiete sind immer offen! Sie 
+werden sich also, um die Mannigfaltigkeit Überdecken zu können, 
+überlappen müssen. Damit wird das berechnete Integral immer zu 
+groß sein. Deshalb müssen wir uns etwas anderes ausdenken.\\
+\linebreak
+Den Ausweg liefert eine sehr hilfreiche Methoden; die sogenannte 
+\emph{Zerlegung der Eins}, für die wir $\alpha\equiv 1$ auf der 
+Mannigfaltigkeit so setzen, dass $\sum\limits_{j=1}^\infty \alpha_j(u)=1$ ist.
+
+\begin{definition}[Zerlegung der Eins]
+	Eine Menge stetiger Funktionen $\alpha_j:M\rightarrow [0,1]$ 
+	mit $j\in\mathbb{N}$ heißt \textbf{Zerlegung der Eins} auf 
+	einer Menge $M\subset\mathbb{R}^n$, falls folgende Bedingungen 
+	erfüllt sind:
+	\begin{enumerate}
+		\item 	$\sum\limits_{j=1}^\infty a_j(u) = 1   \ \ \ \forall u\in M$
+		\item 	Die Zerlegung ist lokal endlich, das heißt für alle 
+				$u\in M$ existiert eine Umgebung $U\subset M$ bezüglich 
+				$M$, so dass auf dieser Umgebung \emph{fast überall} 
+				$\alpha_j=0$ ist.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}[Unterordnung]
+	Sei $\mathcal{U}$ eine bezüglich $M$ offene Überdeckung von 
+	$M\subset\mathbb{R}^n$. Dann heißt die Zerlegung der Eins $\{\alpha_j\}$ 
+	der Überdeckung $\mathcal{U}$ \textbf{untergeordnet}, falls es 
+	für alle $j\in\mathbb{N}$ ein $U_j\in\mathcal{U}$ gibt, so dass
+	\begin{equation*}
+		\mathrm{supp\ }\alpha_j\subset U_j
+	\end{equation*} 
+	wobei mit ''$\mathrm{supp}$'' hier der Träger von $\alpha_j$, 
+	gegeben durch 
+	\begin{equation*}
+		\mathrm{supp\ }\alpha_j=\overline{\left\{u\in M \middle| \alpha_j(u)\neq 0 \right\} }
+	\end{equation*}
+	gemeint ist.
+\end{definition}
+
+\begin{satz}[Existenz der Zerlegung der Eins]
+	Sei $M\subset\mathbb{R}^n$ und $\mathcal{U}$ eine bezüglich $M$ 
+	offene Überdeckung von $M$, dann existiert immer eine Zerlegung 
+	der Eins $\{\alpha_j\}$ von $M$, die $\mathcal{U}$ untergeordnet 
+	ist.
+\end{satz}
+
+Hierzu muss man anmerken, dass wir $\alpha_j$ immer so konstruieren 
+können, das es unendlich oft differenzierbar ist. Später betrachten 
+wir dann die die Überdeckung einer Mannigfaltigkeit mit Kartengebieten. 
+
+\begin{proof}
+	Dieser Beweis ist sehr technisch und langweilig. Deshalb wird hier 
+	auf die Literatur (\emph{Königsberger}) verwiesen.
+\end{proof}
+
+\begin{definition}[Integrierbarkeit auf Mannigfaltigkeiten]
+	Sei $M\subset\mathbb{R}^n$ eine Mannigfaltigkeit, $f:M\rightarrow\mathbb{R}$, 
+	$\mathrm{supp\ }\subset U \subset M$, wobei $U$ ein Kartengebiet 
+	von $M$ ist. Dann heißt $f$ \textbf{integrierbar auf M} falls 
+	$f_{|U}$ (die Funktion eingeschränkt auf U) auf dem Kartengebiet 
+	integrierbar ist.
+	\begin{equation}
+		\int_Mf\mathrm{d}a=\int_Mf_{|U}\mathrm{d}a
+	\end{equation}
+	heißt dann das \textbf{Integral} von $f$ auf $M$.
+\end{definition}
+\newpage
+
+\begin{lemma}[Kriterium für Integration auf Kartengebieten]
+Sei $M\subset\mathbb{R}^n$ eine Mannigfaltigkeit, $f:M\rightarrow\mathbb{R}$, 
+	$\mathrm{supp\ }\subset U \subset M$, wobei $U$ ein Kartengebiet 
+	von $M$ ist, und $\{\alpha_j\}$ eine Zerlegung der Eins auf $M$. 
+	Dann ist die Integrierbarkeit von $f$ auf $M$ zu folgenden 
+	Aussagen äquivalent:
+	\begin{enumerate}
+		\item 	$f\alpha_j$ ist für alle $j\in M$ integrierbar auf $M$.
+		\item	$\sum\limits_{j=1}^\infty\int_M|f|\alpha_j\mathrm{d}a<\infty$
+	\end{enumerate}
+	Daraus folgt dann auch
+	\begin{equation}
+		\int_Mf\mathrm{d}a=\sum\limits_{j=1}^\infty\int_Mf\alpha_j\mathrm{d}a
+	\end{equation}
+\end{lemma}
+
+\begin{proof}
+	Ist $f$ integrierbar auf $M$, so folgt 1. unmittelbar aus Satz 
+	30.7. Außerdem ist
+	\begin{equation*}
+		\sum\limits_{j=1}^\infty\int_M|f|\alpha_j\mathrm{d}a = 
+		\lim\limits_{ k \rightarrow \infty }\sum\limits_{j=1}^k\int_M|f|\alpha_j\mathrm{d}a \leq 
+		\int|f|\mathrm{d}a < \infty
+	\end{equation*}
+	Durch die majorisierte Konvergenz folgt (31.2).\\
+	Gelten 1. und 2., so folgt durch die Monotone Konvergenz, dass 
+	$|f|$ integrierbar und somit (nach Satz 30.7) auch $f$ integrierbar 
+	ist.
+	
+\end{proof}
+
+\begin{definition}[Integral auf Mannigfaltigkeiten]
+	Sei $M\subset\mathbb{R}^n$ eine Mannigfaltigkeit und $\mathcal{U}$ 
+	eine offene Überdeckung von $M$ mit Kartengebieten. Dann heißt 
+	$f:M\rightarrow\mathbb{R}$ \textbf{integrierbar auf M}, falls eine
+	Zerlegung der Eins existiert, die $\mathcal{U}$ untergeordnet ist, 
+	so dass
+	\begin{enumerate}
+		\item 	$f\alpha_j$ für alle $j\in\mathbb{N}$ integrierbar
+				 auf $M$ ist.
+		\item 	$\sum\limits_{j=1}^\infty\int_M|f|\alpha_j\mathrm{d}a<\infty$
+	\end{enumerate}	 
+	Wir nennen dann 
+	\begin{equation}
+		\int_Mf\mathrm{d}a\coloneqq
+		\sum\limits_{j=1}^\infty\int_Mf\alpha_j\mathrm{d}a
+	\end{equation}
+	auch \textbf{Integral auf M}.
+\end{definition}
+
+\begin{satz}[Rechtfertigung der Integralbegriffe]
+	Die Definitionen der Integrierbarkeit von $f$ auf $M$ und des 
+	Integrals $\int_Mf\mathrm{d}a$ sind unabhängig von der 
+	konkreten Überdeckung $\mathcal{U}$ und der Zerlegung der Eins $\{\alpha_j\}$.
+\end{satz}
+
+\emph{Beweisidee:} Sei $f:M\rightarrow\mathbb{R}$ integrierbar auf 
+$M$ und $\mathcal{U}$ und $\{\alpha_j\}$ wie in der Definition. Dann 
+zeigen für weitere Überdeckungen $\tilde{\mathcal{U}}$ und ihre 
+untergeordneten Zerlegungen der Eins $\{\alpha_j\}$, dass 
+\begin{equation*}
+	\sum\limits_{j=1}^\infty\int_M\alpha_j\mathrm{d}a = 
+	\sum\limits_{j=1}^\infty\int_M\tilde{\alpha}_j\mathrm{d}a
+\end{equation*}
+Dazu verwenden wir Lemma 31.2.\\
+\linebreak
+
+\begin{definition}[Integral auf Teilmengen von Mannigfaltigkeiten]
+	Ist $M\subset\mathbb{R}^n$ eine Mannigfaltigkeit und $A$ eine 
+	Teilmenge derselben, so heißt die Funktion $f:A\rightarrow\mathbb{R}$ 
+	integrierbar auf $A$, falls
+	\begin{equation*}
+		f_A\coloneqq\left\{\begin{matrix}
+		f \ \ \mathrm{auf\ }A \\ 0 \ \ \mathrm{sont}
+		\end{matrix}\right.
+	\end{equation*}
+	auf $M$ integrierbar ist.
+	Wir setzen dann
+	\begin{equation*}
+		\int_Af\mathrm{d}a\coloneqq\int_Mf_A\mathrm{d}a
+	\end{equation*}
+	als das Integral von $f$ auf $A$. Dasselbe $A$ heißt dann auch
+	(endlich) \textbf{messbar in M}, falls $f\equiv 1$ integrierbar 
+	auf $A$ ist. Natürlich nennen wir dann
+	\begin{equation*}
+		v_d(A)\coloneqq\int_A\mathrm{d}a
+	\end{equation*}
+	den d-dimensionalen Inhalt oder das d-dimensionale Maß von A.
+\end{definition}
+Der feine Zusatz ''endlich'' ist zu beachten, denn unter dem normalen 
+Lebesque-Maß sind wir auch $\mathcal{L}^n(A)=\infty$ gewohnt. Hier 
+ist $v_d(A)$ jedoch strikt endlich.
+
+\begin{definition}[d-Nullmengen]
+$A\subset M$ heißt \textbf{d-Nullmenge}, falls $v_d(A)=0$ ist. 
+d-Nullmengen auf $M$ entsprechen natürlich $\mathcal{L}$-Nullmengen 
+im Parameterbereich.
+\end{definition}
+
+\begin{satz}
+Ist $M\subset\mathbb{R}^n$ eine Mannigfaltigkeit und $A\subset M$ 
+kompakt bezüglich $M$, sowie $f:A\rightarrow\mathbb{R}$ eine stetige 
+Abbildung. Dann ist $f$ auf $A$ integrierbar.
+\end{satz}
+Wir wissen, dass $A$ kompakt ist, wenn das Urbild $\varphi^-1(A)$ kompakt 
+ist, da $\varphi$ ja homöomorph ist.\\
+\emph{Beweisidee:} Da $A$ kompakt ist, gibt es eine endliche 
+Überdeckung mit Kartengebieten. Da $f(\varphi(.))\sqrt{g^\varphi(.)}$ 
+stetig ist, ist es integrierbar auf kompakten Mengen.\\
+\linebreak
+Wir können nun, da wir statt nur auf Kartengebieten, auf ganzen 
+Mannigfaltigkeiten integrieren können, die Integraleigenschaften 
+aus Satz 30.7 neu formulieren:
+\begin{satz}[Eigenschaften des Integrals über Mannigfaltigkeiten]
+	Sei $M\subset\mathbb{R}^n$ eine Mannigfaltigkeit, und 
+	$f,g,f_k:M\rightarrow\mathbb{R}$ Funktionen, die von der 
+	Mannigfaltigkeit nach $\mathbb{R}$ abbilden, dann gelten die 
+	folgenden Beziehungen:
+	\begin{enumerate}
+		\item 	$f$ ist einerseits genau dann auf $M$ integrierbar, 
+				wenn $|f|$ integrierbar auf $M$ ist und auch genau dann, 
+				wenn es $f^+$ und $f^-$ sind.
+		\item 	Sind $f$ und $g$ integrierbar auf $M$ und $c\in\mathbb{R}$, 
+				so ist
+				\begin{equation*}
+					\int_Mcf\pm g\mathrm{d}a = 
+					c\int_Mf\mathrm{d}a\pm\int_Mg\mathrm{d}a
+				\end{equation*}
+		\item 	Sind $f$ und $g$ integrierbar und $g$ beschränkt auf $M$, 
+				dann ist auch $f\circ g$ integrierbar auf $M$.
+		\item 	Sind $f$ und $g$ integrierbar und $f\leq g$ auf $M$, 
+				dann dies auch für die Integrale:
+				\begin{equation*}
+					\int_Mf\mathrm{d}a\leq\int_Mg\mathrm{d}a
+				\end{equation*}
+		\item	\textbf{Monotone Konvergenz:} Seien alle $f_k$ 
+				integrierbar und $f_1\leq f_2\leq ...$ auf $M$, 
+				außerdem sei die Folge der Integrale $\left(\int_Mf_k\mathrm{d}a\right)$ 
+				beschränkt sowie $f(u)=\lim\limits_{k\rightarrow\infty}f_k(u) \ \ \forall u\in M$, 
+				dann ist $f$ integrierbar auf $M$ mit
+				\begin{equation*}
+					\int_Mf\mathrm{d}a = 
+					\lim\limits_{k\rightarrow\infty}\int_Mf_k\mathrm{d}a
+				\end{equation*}
+		\item 	\textbf{Majorisierte Konvergenz:} Seien $g$ und alle $f_k$ 
+				integrierbar und weiterhin $f_k\leq g \ \ \forall k$ auf $M$. 
+				Außerdem möge $f(u) = \lim\limits_{k\rightarrow\infty}f_k(u) \ \ \forall u\in M$ 
+				sein. Dann ist $f$ integrierbar auf $M$ mit
+				\begin{equation*}
+					\int_Mf\mathrm{d}a = 
+					\lim\limits_{k\rightarrow\infty}\int_Mf_k\mathrm{d}a
+				\end{equation*}
+	\end{enumerate}
+\end{satz}
