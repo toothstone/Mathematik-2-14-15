@@ -1,5 +1,5 @@
 Für eine explizite Berechnung von $\int\limits_M f \mathrm{d}a $
-benutzt man idR keine Zerlegung keine ZdE, sondern zerlegt 
+benutzt man idR keine ZdE, sondern zerlegt 
 $M = \bigcup\limits_j M_j $ mit $M_j $ paarweise disjunkt und berechnet alle
 $\int\limits_{M_j} f \mathrm{d}a $ \\
 $\longrightarrow \int\limits_M f \mathrm{d}a 
@@ -31,12 +31,12 @@ $\longrightarrow \int\limits_M f \mathrm{d}a
     'fehlende' n-te Komponente dar, $(x', x_n) $ ist also ein n-dimensionaler Vektor.
     Analog wird $Q'$ durch das Intervall $I$ zur Teilmenge vom $\mathbb{R}^n $ ergänzt.
     
-    \textbf{Skizze fehlt}    
-    
+    \includegraphics[scale=0.4]{pictures/007-01}
+       
     Das heißt in einer Umgebung von $x$ stimmt $\partial \Omega $ mit dem Graphen von $h$
     überein und $\Omega$ liegt über dem Graphen.
     
-    \textbf{Skizze fehlt}
+    \includegraphics[scale=0.5]{pictures/007-02}
     
     $\partial_r \Omega $ bezeichnet die \textbf{Menge aller regulären Randpunkte}. \\
     $\partial_s \Omega \coloneqq \partial \Omega / \partial_r \Omega $ ist die 
@@ -47,8 +47,8 @@ $\longrightarrow \int\limits_M f \mathrm{d}a
     für zugehörige $Q' \subset \mathbb{R}^{n-1} $.
 \end{definition}    
     
-Es ist zu beachten, dass $\partial_r \Omega $ ist lokal Graph einer
-$C^1$-Funktion und somit eine (n-1)-dimensionale Mannigfaltigkeit nach Satz 29.1. \\
+Es ist zu beachten, dass $\partial_r \Omega $ lokal Graph einer
+$C^1$-Funktion ist und somit eine (n-1)-dimensionale Mannigfaltigkeit nach Satz 29.1. \\
 Für einen glatten Teilrand $\Gamma \subset \partial_r \Omega $ gilt:
 $v_{n-1} \left(\overline{\Gamma} / \Gamma \right) = 0 $\\
 ($\varphi \left(x' \right) = \left(x', h\left(x' \right) \right)
@@ -107,12 +107,15 @@ Da in jedem $x \in \partial_r \Omega $ nur zwei Einheitsnormalen existieren, da
 $\gamma'(.) $ stetig ist und wegen (4) liefert (3) ein ENF auf der Menge
 $\partial_r \Omega $ (insbesondere ist $\nu(.) $ stetig auf $\partial_r \Omega $)
 
-Da alle $\nu(x) $ nach 'außen' zeigen. heißt $\nu$ aus (3) \textbf{äußeres ENF} von
+Da alle $\nu(x) $ nach 'außen' zeigen, heißt $\nu$ aus (3) \textbf{äußeres ENF} von
 $\partial_r \Omega $.\\
 Damit ist $\partial_r \Omega $ mit $\nu$ eine orientierte (n-1)-dimensionale
 Mannigfaltigkeit.
 
+\includegraphics[scale=0.3]{pictures/007-03}
+
 \begin{definition}[Divergenz eines Vektorfelds]
+    \mbox{} \\
     Eine Abbildung $F: \mathbb{R}^n \rightarrow \mathbb{R}^n $ heißt auch
     \textbf{Vektorfeld}.\\
     Falls $F$ in $x \in M $ differenzierbar ist, heißt \\
@@ -122,10 +125,12 @@ Mannigfaltigkeit.
 \end{definition}
 
 \begin{satz}[Gaußscher Integralsatz - Spezialfall für Quader]
+\mbox{} \\
 Sei $F: U \subset \mathbb{R}^n \rightarrow \mathbb{R}^n $ ein stetig differenzierbares VF,
 $U$ sei offen, $Q \subset \mathbb{R}^n $ ein Quader, $\overline{Q} \subset U \\
-\Longrightarrow $
+$
 \begin{equation}
+    \Longrightarrow 
     \underbrace
         {\int\limits_Q \mathrm{div\ } F(x) \mathrm{d}x
     }_{
@@ -154,3 +159,44 @@ in (5) wäre dann
 $\int\limits_a^b F'(x) \mathrm{d}x = F(b) - F(a) $\\
 Das heißt der Hauptsatz der Differential- und Integralrechnung ist
 ein Spezialfall des Gaußschen Integralsatzes!
+
+\begin{proof}
+\mbox{} \\
+Sei $\nu(x) = (\nu_1(x), \cdots, \nu_n(x)) $\\
+Wir zeigen für beliebige $C^1$-Funktionen $f: U \rightarrow \mathbb{R} $,
+dass gilt: \\
+\begin{equation}
+    \int\limits_Q \pdiff{}{x_k} f(x) \mathrm{d}x =
+    \int\limits_{\partial Q} f(x) \nu_k (x) \mathrm{d}a
+\end{equation}
+Ersetzt man hier $f$ durch $F_k$ und summiert über über $k$ so folgt (5).\\
+Zeige (6) (oBdA sei $k=n$):
+Sei $Q = Q' \times (a,b), \ Q' \subset \mathbb{R}^{n-1} $ Quader\\
+Auf $\partial_r Q $ hat man
+$\nu_n (x) = 
+\begin{cases}
+    1 \text{ auf } Q' \times \lbrace b \rbrace \\
+    -1 \text{ auf } Q' \times \lbrace a \rbrace \\
+    0 \text{ auf } \partial Q' \times (a,b)
+\end{cases}
+$
+\includegraphics[scale=0.3]{pictures/007-04}
+
+$\Rightarrow \int\limits_{\partial Q} \nu_n f \mathrm{d}a =
+\int\limits_{Q' \times \lbrace b \rbrace} f \mathrm{d}a -
+\int\limits_{Q' \times \lbrace a \rbrace} f \mathrm{d}a
+$ \\
+Nun parametrisiert man die Mannigfaltigkeiten 
+$Q' \times \lbrace a \rbrace $ bzw. $ Q' \times \lbrace b \rbrace $ durch \\
+$x' \rightarrow (x', a) $ bzw. $x' \rightarrow (x', b) $ mit $x' \in Q' $ \\
+Offenbar ist die Gramsche Determinante jeweils 1. \\
+$\Rightarrow 
+\int\limits_{\partial Q} f \nu_n \mathrm{d}a =
+\int\limits_{Q'} f(x',b) \mathrm{d}x' -
+\int\limits_{Q'} f(x',a) \mathrm{d}x' \\
+\stackrel{\text{HS Int'rechnung}}{=}
+\int\limits_{Q'} \left(
+\int\limits_a^b \pdiff{}{x_n} f(x', \psi) \mathrm{d}\psi \right) \mathrm{d}x' \\
+\stackrel{\text{Fubini}}{=} \int\limits_Q \pdiff{}{x_n} f(x) \mathrm{d}x
+\Rightarrow $ (6) $\Rightarrow $ Behauptung.
+\end{proof}
