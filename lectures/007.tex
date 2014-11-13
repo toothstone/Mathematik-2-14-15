@@ -30,18 +30,21 @@ $\longrightarrow \int\limits_M f \mathrm{d}a
     $x'$ bezeichnet nach Konvention einen (n-1)-dimensionalen Vektor, $x_n$ stellt die
     'fehlende' n-te Komponente dar, $(x', x_n) $ ist also ein n-dimensionaler Vektor.
     Analog wird $Q'$ durch das Intervall $I$ zur Teilmenge vom $\mathbb{R}^n $ ergänzt.
+    \begin{center}
+    	\includegraphics[scale=0.4]{pictures/007-01}
+    \end{center}
     
-    \includegraphics[scale=0.4]{pictures/007-01}
        
     Das heißt in einer Umgebung von $x$ stimmt $\partial \Omega $ mit dem Graphen von $h$
     überein und $\Omega$ liegt über dem Graphen.
-    
-    \includegraphics[scale=0.5]{pictures/007-02a}\\
+    \begin{center}
+    \includegraphics[scale=0.5]{pictures/007-02a}
+    \end{center}
     1: regulärer Randpunkt
     2-6: singuläre Randpunkte\\
     \mbox{}\\
     $\partial_r \Omega $ bezeichnet die \textbf{Menge aller regulären Randpunkte}. \\
-    $\partial_s \Omega \coloneqq \partial \Omega / \partial_r \Omega $ ist die 
+    $\partial_s \Omega \coloneqq \partial \Omega \setminus \partial_r \Omega $ ist die 
     \textbf{Menge der singulären Randpunkte}. \\
     $\Gamma \coloneqq \partial \Omega \cap Q \subset \partial_r \Omega $
     gemäß (1) heißt \textbf{glatter} (regulärer) \textbf{Teilrand} von $\Omega$ \\
@@ -91,9 +94,9 @@ Gemäß Bsp. 29.10 erhält man die Einheitsnormalen auf $\partial_r \Omega $
 \end{equation}
 
 \begin{lemma}
-$\forall x \in \partial_r \Omega \exists \delta = \delta(x) > 0$:
+$\forall x \in \partial_r \Omega \ \ \exists \delta = \delta(x) > 0$:
 \begin{equation}
-    x + t \nu(x) \in \mathbb{R}^n / \Omega, \ x - t \nu(x) \in \Omega
+    x + t \nu(x) \in \mathbb{R}^n \setminus \Omega, \ x - t \nu(x) \in \Omega \ \ \
     \forall t \in (0, \delta)
 \end{equation}
 \end{lemma}
@@ -121,7 +124,7 @@ Mannigfaltigkeit.
     Eine Abbildung $F: \mathbb{R}^n \rightarrow \mathbb{R}^n $ heißt auch
     \textbf{Vektorfeld}.\\
     Falls $F$ in $x \in M $ differenzierbar ist, heißt \\
-    $\mathrm{div\ }F(x) \coloneqq \pdiff{F_1}{x_1}(x) + \cdots + \pdiff{F_n}{x_n}(x) =
+    $\div F(x) \coloneqq \pdiff{F_1}{x_1}(x) + \cdots + \pdiff{F_n}{x_n}(x) =
     \mathrm{tr\ }\left(F'(x)\right) $\\
     \textbf{Divergenz} des Vektorfelds $F$ in $x$.
 \end{definition}
@@ -134,7 +137,7 @@ $
 \begin{equation}
     \Longrightarrow 
     \underbrace
-        {\int\limits_Q \mathrm{div\ } F(x) \mathrm{d}x
+        {\int\limits_Q \div  F(x) \mathrm{d}x
     }_{
         \text{Lebesgue-Integral in }\mathbb{R}^n}
     =
@@ -153,7 +156,7 @@ $\mathrm{d}\vec{a} = \nu \mathrm{d}a $ als vektorielles Flächenelement auf
 $\partial Q $.
 
 \textbf{Interpretation bei n = 1:}\\
-$Q = (a,b) \subset \mathbb{R}, \ \mathrm{div\ } F(x) = F'(x) $ \\
+$Q = (a,b) \subset \mathbb{R}, \ \div  F(x) = F'(x) $ \\
 Man kann $\partial Q = \lbrace a, b \rbrace $ 
 als 0-dimensionale Mannigfaltigkeit betrachten,\\
 $\nu(b) = 1, \ \nu(a) = -1 $\\
