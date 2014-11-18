@@ -7,6 +7,16 @@
 
 \newtheoremstyle{theoremstyle} % name
     {\topsep}                    % Space above
+    {}                    % Space below
+    {\upshape}                   % Body font
+    {}                           % Indent amount
+    {\sffamily\bfseries}                   % Theorem head font
+    {}                          % Punctuation after theorem head
+    {.5em}                       % Space after theorem head
+    {\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}  % Theorem head spec (can be left empty, meaning ‘normal’)
+    
+    \newtheoremstyle{otherstyle} % name
+    {\topsep}                    % Space above
     {50px}                    % Space below
     {\upshape}                   % Body font
     {}                           % Indent amount
@@ -19,23 +29,20 @@
 \newtheorem{theo}{Theorem}[section]	% please use "theorem"
 \newtheorem{sa}[theo]{Satz}			% please use "satz"
 \newtheorem{lem}[theo]{Lemma}		% please use "lemma"
+\theoremstyle{otherstyle}
 \newtheorem{folgerung}[theo]{Folgerung}
 \newtheorem*{definition}{Definition}
 \newtheorem{beispiel}{Beispiel}[section]
 \newtheorem*{beispiel*}{Beispiel}
 
 \newenvironment{theorem}
-	{\par\nobreak\vfil\penalty0\vfilneg
-   \vtop\bgroup\color{dblue}\noindent\rule{420pt}{2pt}\vspace{5pt}\begin{theo}}
-	{\end{theo}\rule{50pt}{1pt}\color{black}\par\xdef\tpd{\the\prevdepth}\egroup
-   \prevdepth=\tpd}
+	{\par\nobreak\color{dblue}\noindent\rule{420pt}{2pt}\vspace{5pt}\begin{theo}}
+	{\end{theo}\rule{50pt}{1pt}\vspace{50px}\color{black}\par}
+   
 \newenvironment{satz}
-	{\par\nobreak\vfil\penalty0\vfilneg
-   \vtop\bgroup\color{dblue}\noindent\rule{420pt}{2pt}\vspace{5pt}\begin{sa}}
-	{\end{sa}\rule{50pt}{1pt}\color{black}\par\xdef\tpd{\the\prevdepth}\egroup
-   \prevdepth=\tpd}
+	{\par\nobreak\color{dblue}\noindent\rule{420pt}{2pt}\vspace{5pt}\begin{sa}}
+	{\end{sa}\rule{50pt}{1pt}\vspace{50px}\color{black}\par}
+   
 \newenvironment{lemma}
-	{\par\nobreak\vfil\penalty0\vfilneg
-   \vtop\bgroup\color{dblue}\noindent\rule{420pt}{2pt}\vspace{5pt}\begin{lem}}
-	{\end{lem}\rule{50pt}{1pt}\color{black}\par\xdef\tpd{\the\prevdepth}\egroup
-   \prevdepth=\tpd}
+	{\par\nobreak\color{dblue}\noindent\rule{420pt}{2pt}\vspace{5pt}\begin{lem}}
+	{\end{lem}\rule{50pt}{1pt}\vspace{50px}\color{black}\par}
