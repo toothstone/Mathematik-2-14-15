@@ -9,15 +9,17 @@ $\Delta u $ ist proportional zu $u, \ M-u, \ \Delta t \\
 \Rightarrow \Delta u = \alpha u(M-u) \Delta t 
 \xRightarrow{\text{wie oben}} 
 u' = \gamma u - \tau u^2 (\gamma = \alpha M, \ \tau = \alpha $\\
-Interpretation: Wachstum $u$ wird durch Term $-\tau u^2 $ für große $u$ stärker gebremst als für kleine $u$. \\
+Interpretation: Wachstum $u$ wird durch Term $-\tau u^2 $ für große $u$ 
+stärker gebremst als für kleine $u$. \\
 
 Allgemeine Lösung: für $u(0) = u_0 \\
 u(t) = \frac{\gamma}{\tau + \left(\frac{\gamma}{u_0} - \tau \right) e^{-\gamma t}}
 = \frac{M}{1+\left(\frac{M}{u_0} - 1 \right) e^{-\gamma M t}} $ \\
 Sei  $\alpha, M > 0 \Rightarrow u(t) \xrightarrow{t\rightarrow\infty} M $\\
-\textbf{Skizzen fehlen}\\
+\includegraphics[scale=0.5]{pictures/011-01.png}\\                            
 $u_0 \in (0,M)\\
 u_0 >M\\
+\includegraphics[scale=0.5]{pictures/011-02.png}\\
 u_0 = M \Rightarrow u(t) = M \forall t $\\
 
 Insbesondere beschreibt logistisches Wachstum:
@@ -30,11 +32,11 @@ Insbesondere beschreibt logistisches Wachstum:
 \end{beispiel}
 
 \begin{beispiel}[Freier Fall]
-\textbf{Skizze fehlt}\\
 
 $v(t) = u'(t) $ Geschwindigkeit\\
 
 \textbf{Modellannahme:} Newtonsches Kraftgesetz: $K = m u'' $\\
+\includegraphics[scale=0.5]{pictures/011-03.png}\\                            
 Schwerkraft nahe Erdoberfläche $K = mg$ ($g$ - 'Gravitationskonstante')\\
 $\Rightarrow u'' = g $ bzw. $v' = g \\
 \Rightarrow v(t) = v_0 + gt \\
@@ -124,11 +126,11 @@ $(x, u(x)) \in D \ \forall x \in I $ und $u'(x) = f(x, u(x)) $ ist.
     \item[i)] \emph{Vorbemerkung: Richtungsfeld, Polygonzug:} $u'(x) = f(x, u(x))$\\
         Sei $u$ Lösung mit $(\tilde{x}, u(\tilde{x})) = (\tilde{x}, \tilde{u}) \in D\\
         \Rightarrow f((\tilde{x}, \tilde{u}) $ gibt Anstieg der Kurve $u(.) $ in $x$\\
-        \textbf{Skizze fehlt}\\
+        \includegraphics[scale=0.5]{pictures/011-04.png}\\
         $(x, u, f(x,u)) $ heißt \emph{Richtungsfeld}
         ohne(!) Kenntnis der Umgebung gibt es Anstieg von $u(.)$ in $x$ 
         für den Fall, dass $(x,u) $ zum Graphen von $u(.) $ gehört.\\
-        \textbf{Skizze fehlt}\\
+        \includegraphics[scale=0.5]{pictures/011-05.png}\\
         \emph{Problem:} suche Kurve $u(.) $ die zum Richtungsfeld passt.\\
         \emph{Anfangsgswert:} In 'vielen Fällen' geht durch jeden Punkt $(x,u) \in D $
         genau eine Kurve \\
@@ -138,7 +140,7 @@ $(x, u(x)) \in D \ \forall x \in I $ und $u'(x) = f(x, u(x)) $ ist.
         \emph{Näherungslösung:} Polygonzug\\
         wähle $x_k = x_0 + k h, \ k= 1 \ldots n, \ h$ - Schrittweite\\
         $u_0 = u(x_0) $wird als AW vorgegeben.\\
-        \textbf{Skizze fehlt}\\
+        \includegraphics[scale=0.5]{pictures/011-06.png}\\                    
         Schrittweise setzt man $u_k = u_{k+1} + h f(x_{k-1}, u_{k-1}), \ k= 1 \ldots n $\\
         in 'vielen Fällen' konvergiert Polygonzug für $h \rightarrow 0 $ gegen Lösung.
     \item[ii)]$\mathbf{u'(x) = f(x)}$
@@ -165,7 +167,7 @@ $(x, u(x)) \in D \ \forall x \in I $ und $u'(x) = f(x, u(x)) $ ist.
         \Rightarrow u(x) = -\ln ( \cos x 
         + \underbrace{e^{-u_0} - \cos x_0}_{\coloneqq c})\\
         $        
-        \textbf{Skizze fehlt}\\
+        \includegraphics[scale=0.5]{pictures/011-07.png}\\                            
         Es ist zu beachten, das sich abhängig von den AW der Definitionsbereich der
         Lösung ändert.\\
         Probe: $u' = 
