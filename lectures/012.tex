@@ -1,0 +1,308 @@
+Wir haben gesehen, dass die heuristische Methode ein sehr 
+effektives Werkzeug zum Lösen von Differenzialgleichungen 
+mit getrennten Variablen ist. Doch was rechtfertigt sie 
+mathematisch?\newpage
+
+\begin{satz}
+Seien $f:I_x\subset\mathbb{R}\rightarrow\mathbb{R}$ und 
+$g:I_n\subset\mathbb{R}\rightarrow\mathbb{R}$ zwei stetige 
+Funktionen und $I_x$, $I_n$ zwei Intervalle mit einem $x_0\in I_x$ 
+und einem $u_0\in\mathrm{int\ } I_n$. Außerdem ist 
+$g(u_0)\neq 0$.\\
+Dann besitzt das Anfangswertproblem
+\begin{equation*}
+u'(x)=g(u(x))f(x) \ \ \mathrm{mit\ }u(x_0)=u_0
+\end{equation*}
+eine eindeutige Lösung auf der (eventuell einseitigen) Umgebung 
+von $x_0$, die man durch Auflösung von (2.1) nach $u$ erhält.
+\end{satz}
+
+\begin{proof}
+Zunächst eine kleine Wiederholung: Sei $\varphi:I\rightarrow
+\mathbb{R}$ im offenen Intervall $I$ stetig differenzierbar mit 
+$\varphi'(x)\neq 0$. Dann existiert eine stetig differenzierbare 
+Umkehrabbildung $\varphi^{-1}$. \\
+Nun setzten wir
+\begin{equation*}
+G(u)\coloneqq\int_{u_0}^u\frac{1}{g(s)}\mathrm{d}s, \ \ \
+F(x)\coloneqq\int_{x_0}^x f(t) \mathrm{d}t
+\end{equation*}
+Da $g(u_0)\neq 0$ ist, existiert $G$ in einer Umgebung von $u_0$ 
+und $G'=\frac{1}{g}\neq 0$. \\
+Wir lösen nun einfach (2.1), das heißt $G(u)=F(x)$ ist lokal 
+möglich, und erhalten
+\begin{equation*}
+u(x)=G^{-1}\left(F(x)\right)
+\end{equation*}
+Da $F(x_0)=0$ ist, wird
+\begin{equation*}
+u(x_0) = G^{-1} \left( F(x_0) \right) =G^{-1}(0)=u_0
+\end{equation*}
+Damit ist zunächst das Anfangswertproblem erfüllt. Nun ist noch 
+nachzuprüfen, ob $u(x)$ auch der Differenzialgleichung genügt.
+Dazu differenzieren wir $G\left(u(x)\right)=F(X)$ und erhalten 
+mit Kettenregel
+\begin{equation*}
+G'\left(u(x)u'(x)\right)=F'(x)=f(x)
+\end{equation*}
+Da $G'=\frac{1}{g}$ ist, haben wir
+\begin{equation*}
+u'(x)=g\left(u(x)\right)f(x)
+\end{equation*}
+Damit ist die Differenzialgleichung erfüllt. Bleibt nur noch
+die Eindeutigkeit zu zeigen.\\
+Nehmen wir an, $v(x)$ wäre eine andere Lösung. Offenbar ist 
+in einer Umgebung von $x_0$ immer $g(v(x))\neq 0$. Deswegen 
+können wir schreiben
+\begin{equation*}
+\frac{v'(x)}{g(v(x)}=f(x)
+\end{equation*}
+\begin{equation*}
+\int_{x_0}^x\frac{v'(x)}{g(v(x)}\mathrm{d}t = 
+\int_{x_0}^xf(t)\mathrm{d}t
+\end{equation*}
+\begin{equation*}
+\int_{v_0}^{v(t)}\frac{1}{g(s)}\mathrm{d}s = 
+\int_{x_0}^xf(t)\mathrm{d}t
+\end{equation*}
+Nun steht da
+\begin{equation*}
+G(v(x))=F(x)
+\end{equation*}
+\begin{equation*}
+v(x)=G^{-1}(F(x))=u(x)
+\end{equation*}
+und die Behauptung ist gezeigt.\\
+Falls $g(u_0)=0$ ist, ist die Lösung einfach trivial konstant, 
+nämlich $u(x)=u_0$.
+\end{proof}
+\ \\
+\linebreak
+Wir haben bereits gesehen, dass man gewisse Fälle auf 
+Differenzialgleichungen mit getrennten Variablen zurückführen 
+kann. Deshalb wollen wir einige weitere Beispiel genauer 
+untersuchen.\\
+\linebreak
+
+
+\item[iv)] $u'(x)=f(ax+bu(x)+c)$\\ \linebreak
+Wir wählen als Ansatz 
+\begin{equation*}
+v(x)\coloneqq ax+bu(x)+c
+\end{equation*}
+Und setzten durch einsetzen sofort, dass $v$ die 
+Differenzialgleichung 
+\begin{equation*}
+v'=a+bu'=a+f(v)
+\end{equation*}
+erfüllt. Dabei handelt es sich wieder um eine Gleichung mit 
+getrennten Variablen, für die wir nur $v(x)$ bestimmen müssen. 
+Nach Rücksubstitution erhalten wir dann die ursprüngliche 
+Lösung.
+\begin{equation*}
+u(x)=\frac{1}{b}\left(v(x)-ax-c\right)
+\end{equation*}
+
+\begin{beispiel*}
+\begin{equation*}
+u'=(x+u)^2
+\end{equation*}
+\begin{equation*}
+v(x)=x+u(x)
+\end{equation*}
+\begin{equation*}
+v'=1+v^2
+\end{equation*}
+\begin{equation*}
+\int_{v_0}^v\frac{1}{1+s^2}\mathrm{d}s = 
+\int_{x_0}^x\mathrm{d}t
+\end{equation*}
+Daraus ergibt sich dann
+\begin{equation*}
+	v(x)=\tan(x+c)
+\end{equation*}
+\begin{equation*}
+u(x)=\tan(x+c)-x
+\end{equation*}
+Wir führen noch einmal die Probe durch:
+\begin{equation*}
+u*\frac{1}{\cos^2(x+c)}-1=\frac{\sin^2(x+c)}{\cos^2(x+c)} = 
+(u+c)^2
+\end{equation*}
+\end{beispiel*}
+
+
+\item[v)] $u'=f\left(\frac{u}{x}\right)$ für $x=0$\\
+\linebreak
+Wir wählen als Ansatz $v=\frac{u}{x}$ und erhalten
+\begin{equation*}
+v'=\frac{u'-u}{x^2}=\frac{u'}{x}-\frac{1}{x}\frac{u}{x} = 
+\frac{f(v)-v}{x}
+\end{equation*}
+was wir wieder durch die heuristische Methode lösen können.
+\begin{equation*}
+u(x)=xv(x)
+\end{equation*}
+
+\begin{beispiel*}
+$u'=\frac{u}{x}-\frac{x^2}{u^2}$ mit dem Anfangswert $u(1)=1$ 
+$x>0$
+\begin{equation*}
+v\coloneqq\frac{u}{x}
+\end{equation*}
+Durch Zufall ergibt sich sogar derselbe Anfangswert
+\begin{equation*}
+v(1)=1
+\end{equation*}
+Einsetzen in die Differenzialgleichung liefert
+\begin{equation*}
+v'=-\frac{1}{xv^2}
+\end{equation*}
+\begin{equation*}
+\int_1^v s^2 \mathrm{d}s = -\int_1^x\frac{1}{t}\mathrm{d}t
+\end{equation*}
+\begin{equation*}
+\frac{1}{3}v^3-\frac{1}{3}=-\ln(x)
+\end{equation*}
+\begin{equation*}
+	v(x)=\sqrt[3]{1-3\ln(x)} \ \ \mathrm{falls\ } 1-3\ln(x)>0
+\end{equation*}
+\begin{equation*}
+u(x)=x\sqrt[3]{1-3\ln(x)}
+\end{equation*}
+Probe:
+\begin{equation*}
+u'=\sqrt[3]{1-3\ln(x)}+x\frac{1}{3}(1-3\ln(x))^{-\frac{2}{3}} 
+\left(-\frac{3}{x}\right) = 
+\frac{u}{x} - \frac{x^2}{u^2}
+\end{equation*}
+\end{beispiel*}
+\end{enumerate}
+
+\subsection{Lineare Differenzialgleichungen 1. Ordnung}
+
+Allgemeine explizite Darstellung:
+\begin{equation*}
+u'(x)=g(x)u(x)+f(x)
+\end{equation*}
+falls $f(x)\equiv 0$, nennt man sie auch \emph{homogene}, sonst 
+\emph{inhomogene} Differenzialgleichung. \\
+Im folgenden seien $f$ und $g$ stetig auf $I\subset\mathbb{R}$.
+
+\begin{enumerate}
+
+	\item[i)] \emph{homogene lineare Differenzialgleichung: } 
+	$u'(x)=g(x)u(x)$ mit $u(0)=u_0$\\
+	\linebreak
+	Durch Trennung der Variablen erhalten wir für $u_0\neq 0$
+	\begin{equation*}
+	\int_{u_0}^u\frac{1}{s}\mathrm{d}s = 
+	\int_{x_0}^x g(t) \mathrm{d}t
+	\end{equation*}
+	mit
+	\begin{equation*}
+	G(x)\coloneqq \int_{x_0}^x g(t) \mathrm{d}t
+	\end{equation*}
+	erhalten wir die bereits bekannte Lösung
+	\begin{equation}
+	u(x)=u_0e^{G(x)}
+	\end{equation}
+	die im Übrigen ihr Vorzeichen nicht ändert. Außerdem erfüllt 
+	diese Lösung auch für $u_0=0$ die Gleichung.\\
+	Die Frage ist nun: Gibt es noch weitere Lösungen? Um dies 
+	zu beantworten, nehmen wir wieder $v(x)$ mit $v(x_0)=0$ und 
+	$v(x_1)=v_1\neq v(x_0)$ für $x_1\neq 0$ eine weitere Lösung 
+	wäre. Wir betrachten das Anfangswertproblem
+	\begin{equation*}
+	v'=g(x)v \ \ \ \mathrm{mit\ }v(x_1)=v_1
+	\end{equation*}
+	Satz 34.1 liefert uns die eindeutige Lösung
+	\begin{equation*}
+	v(x)=v_1e^{\int_{x_0}^xg(t)\mathrm{d}t}
+	\end{equation*}
+	damit ist aber $v(x_0)\neq 0$, was zum Widerspruch führt. 
+	Das heißt also, dass (35.2) eine eindeutige Lösung ist.
+	
+	\item[ii)] \emph{inhomogene lineare Differenzialgleichung: }
+	$u'(x)=g(x)u(x)+f(x)$ mit $u(x_0)=u_0$\\
+	\linebreak
+	Um dies zu lösen, wenden wir auf (35.2) die sogenannte 
+	\textbf{Variation der Konstanten} an.
+	\begin{equation*}
+	u(x)=C(x)e^{\int_{x_0}^xg(t)\mathrm{d}t}
+	\end{equation*}
+	das heißt, wir variieren die Konstante in 
+	der allgemeinen Lösung der homogenen Gleichung. Für $C$ muss 
+	dann gelten 
+	\begin{equation*}
+	u'-gu=C'e^{G(x)}+gCe^{G(x)}-gCe^{G(x)}\stackrel{!}{=}f
+	\end{equation*}
+	Das heißt
+	\begin{equation*}
+	C'=f(x)e^{-G(t)} \ \ \ \mathrm{mit\ }C(x_0)=u_0
+	\end{equation*}
+	So erhalten wir durch Integration
+	\begin{equation*}
+	C(x)=u_0+\int_{x_0}^xf(t)e^{-G(t)}\mathrm{d}t
+	\end{equation*}
+	und damit
+	\begin{equation}
+	u(x) = 
+	\left(u_0+\int_{x_0}^xe^{-G(t)}\mathbb{d}t\right)e^{G(x)}
+	\ \ \ \mathrm{mit\ } G(x)=\int_{x_0}^x g(s) \mathrm{d}s
+	\end{equation}
+\end{enumerate}
+\ \\
+\linebreak
+\begin{satz}
+Seien $f,g$ stetig auf $I\subset\mathbb{R}$ und $x_0\in I$. \\
+Dann besitzt das Anfangswertproblem 
+\begin{equation*}
+u'=g(x)u+f(x),\ u(x_0)=u_0
+\end{equation*}
+auf $I$ die eindeutige Lösung (35.3).\\
+\linebreak
+\emph{Beachte:} Die Lösung existiert auf dem gesamten Intervall.
+\end{satz}
+Bevor wir zum Beweis kommen, müssen wir zunächst ein paar 
+allgemeinere Begriffe klären. Die Menge aller Lösungen einer 
+Differenzialgleichung nennen wir auch 
+\textbf{allgemeine Lösung}, welche Parameter enthält, die 
+durch Angabe von Anfangsbedingungen festgelegt werden. \\
+Für lineare Differenzialgleichungen gilt das sogenannte 
+\textbf{Superpositionsprinzip}, nachdem sich die allgemeine 
+Lösung einer inhomogenen Gleichung als Summe aus der allgemeinen 
+Lösung des zugehörigen homogenen Problems und einer einzigen 
+speziellen Lösung schreiben lässt.
+\begin{equation*}
+\underbrace{u_{i}(x)}_{\mathrm{allgemeine\ inhomogene\ Lösung}}
+= \underbrace{u_h(x)}_{\mathrm{allgemeine\ homogene\ Lösung}} + 
+\underbrace{u_s(s)}_{\mathrm{spezielle\ inhomogene\ Lösung}}
+\end{equation*}
+Das lässt sich einfach nachprüfen, in dem wir $u_1$ und $u_2$ 
+betrachten, die beide Lösungen der inhomogenen Gleichung
+\begin{equation*}
+u'=u_1'-u_2'=g(u_1-u_2)=gu
+\end{equation*}
+sein sollen.
+\begin{proof}
+Offenbar sind alle Ausdrücke in (35.3) definiert. Durch 
+Differenziation von (35.3) erhalten wir
+\begin{equation*}
+u'=f(x)e^{-G(x)}\cdot e^{G(x)} + 
+ge^{G(x)}\left(u_0+\int_{x_0}^x f(t)e^{-G(t)}\mathrm{d}t\right) 
+= ue^{-G(x)}=f+gu
+\end{equation*}
+Damit sind sowohl Anfangswertproblem als auch die 
+Differenzialgleichung erfüllt. Für die Eindeutigkeit 
+wählen wir wieder $v$ als andere Lösung und betrachten $w=u-v$. 
+Dann gilt
+\begin{equation*}
+w'-gw=u'-v'-gu-gv=f-f=0
+\end{equation*}
+\begin{equation*}
+w(x_0)=u(x_0)-v(x_0)=u_0-u_0=0
+\end{equation*}
+$w$ löst also die homogene Differenzialgleichung mit ihrem 
+Anfangswertproblem. Nach (35.2) ist diese Lösung eindeutig $w=0$ für alle $x$ und somit $v(x)=u(x)$.
+\end{proof}
